@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        #container{
+            width: 300px;
+            height: 300px;
+            background: #cccccc;
+        }
+        ul{
+            /* height:50px; */
+            overflow: hidden;
+        }
+        li{
+            list-style: none;
+            /* display: inline-block; */
+            float: left;
+            width: 80px;
+            height: 40px;
+            margin-right:3px;
+            background: darkred;
+            text-align: center;
+            line-height: 40px;
+        }
+        li.active{
+            background: darksalmon;
+        }
+        #content div{
+            width: 300px;
+            height: 260px;
+            background: darksalmon;
+            display: none;
+        }
+        #content .selected{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <!-- 点击按钮 -->
+    <ul>
+        <li class="active">1111</li>
+        <li>2222</li>
+        <li>3333</li>
+    </ul>
+    <!-- 内容区域 -->
+    <div id="content">
+        <div class="selected">1111的内容</div>
+        <div>2222的内容</div>
+        <div>3333的内容</div>
+    </div>
+</div>
+
+<script>
+    //定义变量 没有赋值
+    //访问数组中的越界
+
+    var aLi = document.getElementsByTagName('li');
+    var oContent = document.getElementById('content');
+    var aDiv = oContent.getElementsByTagName('div');
+
+    for(var i=0; i<aLi.length; i++){  //页面初始 循环绑定事件  i = 3;
+        aLi[i].index = i;
+        aLi[i].onclick = function(){
+            //this 对当前对象的引用
+            //所有li的active清掉
+            for(var j=0; j<aLi.length; j++){
+                aLi[j].className = "";
+                aDiv[j].className = "";
+            }
+            //自己加上active
+            this.className = "active";
+            //将aDiv数组中的索引是this.index
+            aDiv[this.index].className = "selected";
+        }
+    }
+</script>
+
+
+</body>
+</html>
