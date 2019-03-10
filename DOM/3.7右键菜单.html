@@ -1,10 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #menu {
+            border: 1px solid #ccc;
+            width: 120px;
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        #menu li {
+            width: 120px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-bottom: 1px dashed #ccc;
+            cursor: pointer;
+            list-style: none;
+        }
+        #menu li:hover {
+            background: #999;
+        }
+    </style>
 </head>
 <body>
-$END$
+    <ul id="menu">
+        <li>菜单1</li>
+        <li>菜单2</li>
+        <li>菜单3</li>
+        <li>菜单4</li>
+        <li>菜单5</li>
+    </ul>
+
+    <h1>This is the Mune</h1>
+
+    <script>
+        var oMenu = document.getElementById('menu');
+        var aLi = oMenu.getElementsByTagName('li');
+        document.oncontextmenu = function (e) {
+        e = e || window.event; // 事件对象 兼容性
+        oMenu.style.display = 'block';
+        oMenu.style.left = e.clientX + 'px';
+        oMenu.style.top = e.clientY + 'px';
+        return false; // 阻止默认行为 阻止浏览器默认菜单
+        };
+        document.onclick = function () {
+        oMenu.style.display = 'none';
+        };
+        for (var i = 0; i < aLi.length; i++) {
+        aLi[i].onclick = function () {
+            alert(this.innerHTML);//this 对于当前对象的引用
+        };
+    }
+    </script>
 </body>
 </html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--内部样式-->
+    <style>
+        h1{
+            color: darkred;
+            background: darksalmon;
+        }
+        /*适用于所有的div*/
+        div{
+            width: 200px;
+            height: 40px;
+            background: #cccccc;
+        }
+        /*专属于对应id的div*/
+        #div1{
+            width: 200px;
+            height: 40px;
+            background: #112233;
+        }
+    </style>
+    <!--外部样式，引入外部文件所设计的样式-->
+    <!--<link rel="stylesheet" href="style.css">-->
+</head>
+<body>
+    <!--内联样式-->
+    <h1>HAPPY NEW YEAR!!!</h1>
+    <div>THIS IS DIV!!!</div>
+    <!--div{div$$}*5,img[src=imgs/$.jpg]*5 这类快捷操作记熟-->
+    <div id="div1">div01</div>
+    <div id="div2">div02</div>
+    <div id="div3">div03</div>
+
+
+</body>
+</html>
+<!--
+css选择器
+1·标签/元素选择器 div{}
+2·id选择器：id是唯一的 #id{}
+3·class选择器 class可以重复的
+-->

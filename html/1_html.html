@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--
+name：文档类型。IE6下不写会有问题！！
+html:5加上tab键，样式全部输出html5
+html:4s加上tab键，样式全部输出html4.0.1
+SEO:搜索引擎优化
+-->
+<html lang="en">
+<!--lang可以不写-->
+    <head>
+        <meta charset="UTF-8">
+        <!--tuf-8属于字符集-->
+        <meta name="description" content="happy life!!!"><!--网页描述-->
+        <meta name="keywords" content="Just enjoy your beautiful life time!"><!--搜索关键字-->
+        <link rel="shortcut icon" href="123.ico">
+        <title>interesting！</title>
+        <!--内部样式-->
+        <style></style>
+    </head>
+    <body>
+        <!--内联样式-->
+        <h1 id="malin" style="color: rebeccapurple;background: antiquewhite;width: 150px">
+            The First
+        </h1>
+        <h2 style="color: darksalmon">Beautiful</h2>
+        <h3>Page</h3>
+        <script>
+        var ml = document.getElementById('malin');
+        ml.onclick = function () {
+            alert('hello!!');
+        }
+        </script>
+        <!--option command l:格式化-->
+        <!--command /:注释-->
+        <!--超链接/锚点
+        target="_blank":打开新标签
+        -->
+        <a href="http://www.baidu.com" target="_blank">百度一下</a>
+        <!--有序列表-->
+        <ol>
+            <li>html</li>
+            <li>css</li>
+            <li>javascript</li>
+            <li><a href="http://www.taobao.com">淘宝</a></li>
+        </ol>
+        <!--无序列表-->
+        <ul>
+            <li>php</li>
+            <li>nodejs</li>
+        </ul>
+        <!--图片 绝对路径c://... 相对路径imgs/...-->
+        <img src="../imgs/234.jpg" alt="图片加载失败" title="这是一个图片提示">
+        <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1551185748205&di=9c36784e6e8c6659065281708ae18d31&imgtype=0&src=http%3A%2F%2Fwww.jituwang.com%2Fuploads%2Fallimg%2F130616%2F260154-130616093T384.jpg" alt="">
+        <a href="http://www.baidu.com">
+            <img src="https://img0.bdstatic.com/static/searchdetail/img/logo-2X_0c4ef02.png" alt="">
+        </a>
+        <!--表格:tr行td列 rowspan/colspan:跨行/列(跨行只能从上往下)-->
+        <table border="1">
+            <tr>
+                <td>11</td>
+                <td rowspan="2">22</td>
+            </tr>
+            <tr>
+                <td>33</td>
+            </tr>
+        </table>
+
+        <!--div+css-->
+        <div id="div1">这是一个div</div>
+        <div id="div2">这是一个div</div>
+        <span>这是一个span</span>
+        <span>这是一个span</span>
+        <span>这是一个span</span>
+        <span>这是一个span</span>
+        <p>这是一段文章</p>
+        <p>这又是一段文章</p>
+    </body>
+</html>

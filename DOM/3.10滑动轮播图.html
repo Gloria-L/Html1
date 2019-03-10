@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
+        /* *:“通配符”用来匹配页面上所有元素
+        margin是指从自身边框到另一个容器边框之间的距离，就是容器外距离
+         padding是指自身边框到自身内部另一个容器边框之间的距离，就是容器内距离 */
         *{
             margin: 0;
             padding: 0;
@@ -14,17 +17,23 @@
         #container{
             width: 950px;
             height: 200px;
-            margin:100px auto;
-            position: relative;
+            margin:100px auto; /*块级元素居中*/
+            overflow: hidden; /*img-box溢出隐藏*/
+            position: relative; /*position：absolute 是绝对定位,position：relative 是相对定位，是相对于前面的父级容器定位的*/
+        }
+        #img-box{
+            width: 3950px;/*img-box长度长一点将所有图片都放在一个容器里*/
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            transition: left 1s ease; /*动画效果 1s内变化效果*/
         }
         #img-box img{
-            display: none;
-        }
-        #img-box .selected{
-            display: block;
+            float: left; /*自动向左滑动*/
         }
         #btn-box{
-            list-style: none;
+            list-style: none; /*把图像设置为列表中的列表项目标记*/
             position: absolute;
             right:10px;
             bottom:10px;
@@ -64,7 +73,6 @@
             left: 35px;
         }
     </style>
-
 </head>
 <body>
     <div id="container">
@@ -72,6 +80,7 @@
             <img class="selected" src="dimgs/1.jpg">
             <img src="dimgs/2.jpg">
             <img src="dimgs/3.jpg">
+            <img src="dimgs/1.jpg">
         </div>
         <ul id="btn-box">
             <li class="active">1</li>
@@ -83,73 +92,54 @@
     </div>
 
     <script>
-        /*
-        *****第一步，按钮对应*****
         var aLi = document.getElementsByTagName('li');
-        for (var i = 0;i<aLi.length;i++){
-            aLi.onclick = function () {
-                for (var j = 0;j<aLi.length;j++) {
-                    aLi.className = "";
-                }
-                this.className = "active";
-            }
-        }
-        *****第二步，图片对应*****
-        var aImg = document.getElementByTagName('img');//图片数组
-        var oNext = document.getElementsById('next');
-        */
-        var oContainer = document.getElementById('container');
-        var aLi = document.getElementsByTagName('li');//按钮数组
-        var aImg = document.getElementsByTagName('img');//图片数组
+        var oImgBox = document.getElementById('img-box');
         var oNext = document.getElementById('next');
         var oPrev = document.getElementById('prev');
-        //记录当前索引
+
+        var oUl =  oImgBox.getElementsByTagName('ul')[0];
+        oUl.style.width = aLi[0].offsetWidth*aLi.length + 'px';
+
         var iNow = 0;
 
-        var timer;
-
-        for(var i=0; i<aLi.length; i++){
+        for (var i = 0;i<aLi.length;i++){
             aLi[i].index = i;
-            aLi[i].onclick = function(){  //点击触发事件
-                /*for(var j=0; j<aLi.length; j++){  //清除li的active
-                    aLi[j].className = "";
-                    aImg[j].className = "";
-                }
-
-                this.className = "active"; 重加active
-                或aLi[this.index].className = "active";
-                aImg[this.index].className = "selected";*/
-                change(this.index);
+            aLi[i].onclick = function () {
+                flow(this.index);
                 iNow = this.index;
             }
+
         }
 
         oNext.onclick = function () {
             iNow++;
-            //解决数组越界问题
             if (iNow == aLi.length){
                 iNow = 0;
             }
-            change(iNow);
+            flow(iNow);
         }
 
         oPrev.onclick = function () {
             iNow--;
-            //解决数组越界问题
             if (iNow < 0){
                 iNow = aLi.length - 1;
             }
-            change(iNow);
-
+            flow(iNow);
         }
 
-        function change(num) {
-            for (var i = 0;i<aLi.length;i++){
-                aLi[i].className = "";
-                aImg[i].className = "";
+        function flow(num) {
+            for (var j = 0;j<aLi.length;j++){
+                aLi[j].className = "";
             }
+
+            if (num < -(aLi.length/2)){
+                num = 0;
+                aLi[num].className = "active";
+                oImgBox.style.left = 0 ;
+            }else{
             aLi[num].className = "active";
-            aImg[num].className = "selected";
+            oImgBox.style.left = -num * 950 + 'px';
+        }
         }
 
         run();
@@ -167,7 +157,6 @@
                 oNext.onclick();
             },2000);
         }
-
     </script>
 </body>
 </html>
