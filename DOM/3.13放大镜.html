@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #div1{
+            width: 400px;
+            height: 400px;
+            position: relative;
+            float: left;
+        }
+        #tool{
+            width: 200px;
+            height: 200px;
+            background: rgba(255,255,255,0.4);
+            left:0px;
+            top:0px;
+            display: none;
+            position: absolute;
+        }
+        #div2{
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+            float: left;
+            display: none;
+            position: relative;
+        }
+        #imgs{
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <!--小图-->
+    <div id="div1">
+        <img src="dimgs/111.jpg">
+        <span id="tool" ></span>
+    </div>
+    <!--大图-->
+    <div id="div2">
+        <img id="imgs" src="dimgs/222.jpg">
+    </div>
+    <script>
+        var oDiv1 = document.getElementById('div1');
+        var oTool = document.getElementById('tool');
+        var oDiv2 = document.getElementById('div2');
+        var oImg = document.getElementById('imgs');
+
+        oDiv1.onmouseover = function() {//绑在div1中可解决拖拽丢失问题，不能绑在tool上面
+
+            oTool.style.display = "block";
+            oDiv2.style.display = "block";
+
+            oDiv1.onmousemove = function (e) {
+
+                var x = e.clientX - oTool.offsetWidth / 2;
+                var y = e.clientY - oTool.offsetHeight / 2;
+                var xMax = oDiv1.offsetWidth - oTool.offsetWidth;
+                var yMax = oDiv1.offsetHeight - oTool.offsetHeight;
+
+                if (x < 0) {
+                    x = 0;
+                }
+                if (y < 0) {
+                    y = 0;
+                }
+                if (x > xMax) {
+                    x = xMax;
+                }
+                if (y > yMax) {
+                    y = yMax;
+                }
+
+                oTool.style.left = x + "px";
+                oTool.style.top = y + "px";
+
+                //1.tool能走的最大距离
+                var smallMax = oDiv1.offsetWidth - oTool.offsetWidth;
+                var smallMax2 = oDiv1.offsetHeight - oTool.offsetHeight;
+                //2.大图能走的最大距离
+                var bigMax = oImg.offsetWidth - oDiv2.offsetWidth;
+                var bigMax2 = oImg.offsetHeight - oDiv2.offsetHeight;
+                //3.tool走的比例
+                var xPercent = oTool.offsetLeft/smallMax;
+                var yPercent = oTool.offsetTop/smallMax2;
+                //4.求大图应走的距离
+                oImg.style.left = -bigMax * xPercent + "px";
+                oImg.style.top = -bigMax2 * yPercent + "px";
+            }
+
+        }
+        oDiv1.onmouseout = function () {
+            oTool.style.display = "none";
+            oDiv2.style.display = "none";
+        }
+    </script>
+</body>
+</html>
