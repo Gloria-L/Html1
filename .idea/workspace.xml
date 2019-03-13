@@ -2,12 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2041f841-af33-4990-ac80-7b0d87561273" name="Default" comment="html基础">
-      <change afterPath="$PROJECT_DIR$/DOM/3.13拖拽.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DOM/3.10动画.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DOM/3.10无缝滑动轮播图.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DOM/3.10获取宽度.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DOM/jslib.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/WebProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/WebProject.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/1_html.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/2_html.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOM/3.10淡入淡出.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DOM/3.10淡入淡出.html" beforeDir="false" afterPath="$PROJECT_DIR$/DOM/3.10淡入淡出轮播图.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DOM/3.10滑动轮播图.html" beforeDir="false" afterPath="$PROJECT_DIR$/DOM/3.10滑动轮播图.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DOM/3.13拖拽.html" beforeDir="false" afterPath="$PROJECT_DIR$/DOM/3.13拖拽.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cssdiv.html" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/../untitled/.tmp/" />
@@ -70,8 +77,8 @@
       <file leaf-file-name="3.13拖拽.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DOM/3.13拖拽.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+            <state relative-caret-position="168">
+              <caret line="8" column="11" lean-forward="true" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -211,15 +218,15 @@
       <workItem from="1552095326038" duration="33688000" />
       <workItem from="1552203094133" duration="176000" />
       <workItem from="1552203294566" duration="4845000" />
-      <workItem from="1552455382905" duration="811000" />
+      <workItem from="1552455382905" duration="1148000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53407000" />
+    <option name="totallyTimeSpent" value="53744000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="34" y="26" width="1110" height="660" extended-state="0" />
+    <frame x="33" y="25" width="1110" height="660" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2" />
@@ -495,8 +502,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DOM/3.13拖拽.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+        <state relative-caret-position="168">
+          <caret line="8" column="11" lean-forward="true" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
         </state>
       </provider>
     </entry>
