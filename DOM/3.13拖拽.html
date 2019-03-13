@@ -11,9 +11,36 @@
             margin: 0;
             padding: 0;
         }
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: crimson;
+            position: absolute;
+        }
     </style>
 </head>
 <body>
+    <div id="div1">
 
+    </div>
+    <script>
+        var oDiv1 = document.getElementById('div1');
+
+        oDiv1.onmousedown = function(e){  //鼠标按下的时候
+            var disX = e.clientX - oDiv1.offsetLeft;  //
+            var disY = e.clientY - oDiv1.offsetTop;  //
+
+            document.onmousemove = function (e) {  //防止div被甩掉
+                console.log(e.clientX,e.clientY);
+
+                oDiv1.style.left = e.clientX - disX + "px";
+                oDiv1.style.top = e.clientY - disY + "px";
+
+            }
+            oDiv1.onmouseup = function () {
+                document.onmousemove = null;
+            }
+        }
+    </script>
 </body>
 </html>
