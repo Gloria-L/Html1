@@ -24,6 +24,28 @@
 
     </div>
     <script>
+        //鼠标移动事件
+        //box.onmousemove = function(e){
+        //    console.log(e)
+        //}
+        //鼠标划入事件
+        //box.onmouseover = function(e){
+        //    console.log(e)
+        //}
+        //鼠标划出事件
+        //box.onmouseout = function(e){
+        //    console.log(e)
+        //}
+        //一、clientX、clientY
+        //点击位置距离当前body可视区域的x，y坐标
+        //二、pageX、pageY
+        //对于整个页面来说，包括了被卷去的body部分的长度
+        //三、screenX、screenY
+        //点击位置距离当前电脑屏幕的x，y坐标
+        //四、offsetX、offsetY
+        //相对于带有定位的父盒子的x，y坐标
+        //五、x、y
+        //和screenX、screenY一样
         var oDiv1 = document.getElementById('div1');
 
         oDiv1.onmousedown = function(e){  //鼠标按下的时候

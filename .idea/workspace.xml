@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2041f841-af33-4990-ac80-7b0d87561273" name="Default" comment="html基础">
+      <change afterPath="$PROJECT_DIR$/DOM/dimgs/4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DOM/3.13拖拽.html" beforeDir="false" afterPath="$PROJECT_DIR$/DOM/3.13拖拽.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/../untitled/.tmp/" />
@@ -64,8 +66,8 @@
       <file leaf-file-name="3.13拖拽.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DOM/3.13拖拽.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="42" column="9" lean-forward="true" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
+            <state relative-caret-position="170">
+              <caret line="48" column="10" selection-start-line="48" selection-start-column="10" selection-end-line="48" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -139,7 +141,7 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
+    <option name="x" value="150" />
     <option name="y" value="47" />
     <option name="width" value="1110" />
     <option name="height" value="660" />
@@ -217,16 +219,15 @@
       <workItem from="1552095326038" duration="33688000" />
       <workItem from="1552203094133" duration="176000" />
       <workItem from="1552203294566" duration="4845000" />
-      <workItem from="1552455382905" duration="2688000" />
+      <workItem from="1552455382905" duration="3244000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55284000" />
+    <option name="totallyTimeSpent" value="55840000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="47" width="1110" height="660" extended-state="0" />
-    <editor active="true" />
+    <frame x="150" y="47" width="1110" height="660" extended-state="0" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -510,8 +511,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DOM/3.13拖拽.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="42" column="9" lean-forward="true" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
+        <state relative-caret-position="170">
+          <caret line="48" column="10" selection-start-line="48" selection-start-column="10" selection-end-line="48" selection-end-column="10" />
         </state>
       </provider>
     </entry>
