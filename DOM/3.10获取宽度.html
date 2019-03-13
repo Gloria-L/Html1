@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: lightpink;
+            padding: 20px;
+            border: 5px solid #999999;
+            margin: 50px;
+        }
+        #parent{
+            position: relative;
+            background: bisque;
+        }
+
+    </style>
+</head>
+<body>
+    <button id="btn">click</button>
+    <div id="parent">
+        <div id="div1"></div>
+    </div>
+    <script>
+        var oDiv = document.getElementById('div1');
+        // offsetWidth border+padding+width
+        // .style.width只能取到内联样式
+        // offsetLeft相对于最近已定位的 祖先 元素的left值
+        console.log(oDiv.offsetWidth);
+        console.log(oDiv.offsetLeft);
+        console.log(oDiv.offsetHeight);
+        console.log(oDiv.offsetTop);
+    </script>
+</body>
+</html>

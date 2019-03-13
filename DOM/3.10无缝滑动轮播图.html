@@ -1,15 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        /* *:“通配符”用来匹配页面上所有元素
-        margin是指从自身边框到另一个容器边框之间的距离，就是容器外距离
-         padding是指自身边框到自身内部另一个容器边框之间的距离，就是容器内距离 */
         *{
             margin: 0;
             padding: 0;
@@ -76,9 +72,10 @@
 <body>
 <div id="container">
     <div id="img-box">
-        <img class="selected" src="dimgs/1.jpg">
+        <img src="dimgs/1.jpg">
         <img src="dimgs/2.jpg">
         <img src="dimgs/3.jpg">
+        <img src="dimgs/1.jpg">
     </div>
     <ul id="btn-box">
         <li class="active">1</li>
@@ -88,53 +85,45 @@
     <span id="prev">&lt;</span>
     <span id="next">&gt;</span>
 </div>
-
+<script src="jslib.js"></script>
 <script>
-    var aLi = document.getElementsByTagName('li');
-    var oImgBox = document.getElementById('img-box');
     var oNext = document.getElementById('next');
     var oPrev = document.getElementById('prev');
+    var oImgBox = document.getElementById('img-box');
+    var aImg = oImgBox.getElementsByTagName('img');
+    var aLi = document.getElementsByTagName('li');
     var iNow = 0;
-    for (var i = 0;i<aLi.length;i++){
-        aLi[i].index = i;
-        aLi[i].onclick = function () {
-            flow(this.index);
-            iNow = this.index;
-        }
-    }
-    oNext.onclick = function () {
+    oNext.onclick = function(){
         iNow++;
-        if (iNow == aLi.length){
-            iNow = 0;
+        if(iNow == aImg.length){
+            oImgBox.style.left = 0;
+            // 显示索引是1的图片
+            iNow = 1;
         }
-        flow(iNow);
+        change(iNow);
     }
     oPrev.onclick = function () {
         iNow--;
-        if (iNow < 0){
-            iNow = aLi.length - 1;
+        if(iNow < 0) {
+            oImgBox.style.left = - (aImg.length - 1) * 950 + "px";
+            iNow = aLi.length - 2;
         }
-        flow(iNow);
+        change(iNow);
     }
-    function flow(num) {
-        for (var j = 0;j<aLi.length;j++){
-            aLi[j].className = "";
+    function change(num){
+        // 变图片
+        animate(oImgBox,{
+            left: -num * 950
+        });
+        // 变按钮
+        for(var i=0; i<aLi.length; i++){
+            aLi[i].className = "";
         }
-            aLi[num].className = "active";
-            oImgBox.style.left = -num * 950 + 'px';
-    }
-    run();
-    oContainer.onmouseover = function () {
-        clearInterval(timer);
-    }
-    oContainer.onmouseout = function () {
-        run();
-    }
-    function run(){
-        timer = setInterval(function (){
-            oNext.onclick();
-        },2000);
+        aLi[num==aLi.length?0:num].className = "active";
     }
 </script>
+
+
+
 </body>
 </html>

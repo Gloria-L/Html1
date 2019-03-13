@@ -16,10 +16,10 @@
         }
         #container{
             position: relative;
-        }
-        #img-box{
-            position: relative;
             height: 420px;
+        }
+        #container img-box{
+            width: 100%;
         }
         #img-box div{
             text-align: center;
@@ -27,19 +27,13 @@
             top: 0;
             left: 0;
             width: 100%;
-            opacity: 0; /*设置 div 元素的不透明级别*/
             transition: all 2s ease; /*淡入淡出效果*/
-        }
-        #img-box .active{
-            opacity: 1;
-            z-index: 1;
         }
         #btn-box {
             position: absolute;
             left: 50%;  /*水平居中*/
+            bottom: 50px;
             transform: translateX(-50%);  /*挪自己宽度的50%*/
-            bottom: 30px;
-            z-index: 999;
         }
         #btn-box li {
             width: 25px;
@@ -53,7 +47,6 @@
         }
         #btn-box .selected {
             background-color: #fff;
-            opacity: .6;
         }
     </style>
 </head>
@@ -91,10 +84,10 @@
             aLi[i].onmouseover = function () {
                 for (var j = 0;j<aLi.length;j++){
                     aLi[j].className = "";
-                    aDiv[j].className = "";
+                    aDiv[j].style.opacity = "0";
                 }
                 this.className = "selected";
-                aDiv[this.index].className = "active";
+                aDiv[this.index].style.opacity = "1";
             }
         }
     </script>
