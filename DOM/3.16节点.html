@@ -2,16 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=div, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
 <body>
-    <div>
-        <span><ahahaha!/span> 
-
-    </div>
-    <div</div>
+    <div id="div1"><span>hahah</span></div>
+    <ul id="ul1">
+        <li id="li1">aaa</li>
+        <!-- ygyggjh -->
+        <li id="li2">bbb</li>
+    </ul>
+    <!-- dftgyhujk -->
     <script>
         var oDiv1 = document.getElementById('div1');
         // console.log(oDiv1.nodeType);
@@ -21,9 +23,14 @@
         // console.log(oDiv1.nodeValue); //DIV
         // console.log(oDiv1.firstChild.nodeValue);  //#text
         // 节点遍历
-        /*nextSibling  
+        /* 
+            nextSibling    nextElementSibling
             在标准浏览器下会取到文本节点（回车     ）;
             ie浏览器下  找到的是下一个元素节点
+            previousSibling
+            firstChild
+            lastChild
+            children
         */
         var oLi1 = document.getElementById('li1');
         var oLi2 = document.getElementById('li2');
@@ -42,6 +49,28 @@
         var oNext = next(oLi2);
         // oNext.style.background = "pink";
         alert(oNext);
+        // previousSibling  previousElementSibling  
+        function prev(elem){
+            do{
+                elem = elem.previousSibling;
+                // null
+                // 有效值（不为null）  节点类型不是元素节点
+            }while(elem && elem.nodeType != 1);
+            return elem;
+            // 返回下一个元素节点
+        }
+        var oUl = document.getElementById('ul1');
+        // oUl.firstChild     //firstElementChild
+        function first(elem){
+            elem = elem.firstChild;
+            if(elem.nodeType != 1){
+                elem = next(elem);
+            }
+            return elem;
+        }
+        var oFirst = first(oUl);
+        oFirst.style.background = "red";
+        console.log(oUl.children);
     </script>
 
 </body>

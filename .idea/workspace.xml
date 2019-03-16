@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2041f841-af33-4990-ac80-7b0d87561273" name="Default" comment="html基础" />
+    <list default="true" id="2041f841-af33-4990-ac80-7b0d87561273" name="Default" comment="html基础">
+      <change beforePath="$PROJECT_DIR$/DOM/3.16节点.html" beforeDir="false" afterPath="$PROJECT_DIR$/DOM/3.16节点.html" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/../untitled/.tmp/" />
     <ignored path="$PROJECT_DIR$/../untitled/temp/" />
     <ignored path="$PROJECT_DIR$/../untitled/tmp/" />
@@ -17,7 +19,7 @@
       <file leaf-file-name="3.13垂直导航菜单.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DOM/3.13垂直导航菜单.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-347">
+            <state relative-caret-position="798">
               <caret line="38" column="12" lean-forward="true" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -535,7 +537,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DOM/3.13垂直导航菜单.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-347">
+        <state relative-caret-position="798">
           <caret line="38" column="12" lean-forward="true" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
