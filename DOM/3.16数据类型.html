@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //基本数据
+        var a = "abc";
+        var b = a;
+        a = "123";
+        console.log(b); //"abc":存在栈内存中
+
+        var arr = [1,2,3];//存一个地址
+        var arr1 = arr;//存arr指向的地址
+
+        arr[0] = 666；
+        console.log(arr1);//存在堆内存中
+    </script>
+</body>
+</html>

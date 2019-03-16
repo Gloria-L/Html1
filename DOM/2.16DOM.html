@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">aaaaaaa</div>
+    <ul class="aa">
+        <li>111</li>
+        <li>222</li>
+        <li>333</li>
+    </ul>
+    <!--
+        document.getElementById('div1')  返回dom对象  没有返回null
+        document.getElementsByTagName()   返回类数组 没有返回[]
+        document.getElementsByClassName() 返回类数组 没有返回[]
+        document.getElementsByName()  返回类数组 没有返回[]
+        querySelector   返回DOm对象  如果有多个 只返回第一个
+     -->
+        <script>
+            var oDiv = document.querySelector('#div1');
+            var aLi = document.querySelectorAll('li');
+            console.log(aLi);
+            /*
+                oDiv.className = "aaa";
+                oDiv.style.background = "red";
+                oDiv.style.width  只能取到内联样式
+                oDiv.offsetWidth   border+padding +content
+                oDiv.offsetHeight
+                oDiv.offsetLeft  距离最近已定位的祖先元素的距离
+            */
+            function a(){
+                console.log('dfghj')
+            }
+
+            oDiv.onclick = a;
+        </script>
+    </body>
+</html>
