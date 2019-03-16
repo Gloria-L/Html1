@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=div, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <span><ahahaha!/span> 
+
+    </div>
+    <div</div>
+    <script>
+        var oDiv1 = document.getElementById('div1');
+        // console.log(oDiv1.nodeType);
+        // console.log(oDiv1.firstChild.nodeType);
+        // console.log(oDiv1.nodeName); //DIV
+        // console.log(oDiv1.firstChild.nodeName);  //#text
+        // console.log(oDiv1.nodeValue); //DIV
+        // console.log(oDiv1.firstChild.nodeValue);  //#text
+        // 节点遍历
+        /*nextSibling  
+            在标准浏览器下会取到文本节点（回车     ）;
+            ie浏览器下  找到的是下一个元素节点
+        */
+        var oLi1 = document.getElementById('li1');
+        var oLi2 = document.getElementById('li2');
+        // oLi1.nextSibling.style.background = "red";
+        // oLi1.nextElementSibling.style.background = "green";
+    
+        function next(elem){
+            do{
+                elem = elem.nextSibling;
+                // null
+                // 有效值（不为null）  节点类型不是元素节点
+            }while(elem && elem.nodeType != 1);
+            return elem;
+            // 返回下一个元素节点
+        }
+        var oNext = next(oLi2);
+        // oNext.style.background = "pink";
+        alert(oNext);
+    </script>
+
+</body>
+</html>
