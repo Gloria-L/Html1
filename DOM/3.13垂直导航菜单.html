@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #container{
+            border: 1px solid #ccc;
+            width: 150px;
+            background: #ffffff;
+
+        }
+        h2{
+            background: brown;
+            color: bisque;
+            text-align: center;
+        }
+        #container ul{
+            background: white;
+            display: none;
+            cursor: hand;
+        }
+        #container li{
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div style="cursor: pointer" id="container">
+        <span><h2>管理区</h2></span>
+        <ul>
+            <li>001</li>
+            <li>002</li>
+            <li>003</li>
+
+        </ul>
+
+        <span><h2>交流区</h2></span>
+        <ul>
+            <li>001</li>
+            <li>002</li>
+            <li>003</li>
+        </ul>
+    </div>
+    <script>
+        var aH2 = document.getElementsByTagName('h2');
+        var aUl = document.getElementsByTagName('ul');
+
+        for(var i=0;i<aH2.length;i++){
+            aH2[i].index = i;
+            aH2[i].flag = false;
+            aH2[i].onclick = function(){
+                var oUl = aUl[this.index];
+            //111111111111
+            //     if (oUl.style.display == "" || oUl.style.display == "none") {
+            //         // console.log(oUl.style.display);
+            //         // aH2[this.index].style.display = "block";
+            //         oUl.style.display = "block";
+            //     }else if (oUl.style.display == "block"){
+            //         oUl.style.display = "none";
+            //     }
+            //222222222222
+                if (this.flag) {
+                    oUl.style.display = "none";
+                }else{
+                    oUl.style.display = "block";
+                }
+                this.flag = !this.flag;
+            }
+        }
+    </script>
+</body>
+</html>

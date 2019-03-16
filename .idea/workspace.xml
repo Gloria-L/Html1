@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2041f841-af33-4990-ac80-7b0d87561273" name="Default" comment="html基础">
-      <change afterPath="$PROJECT_DIR$/DOM/3.13放大镜.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DOM/dimgs/111.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DOM/dimgs/222.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DOM/3.13垂直导航菜单.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOM/3.13拖拽.html" beforeDir="false" afterPath="$PROJECT_DIR$/DOM/3.13拖拽.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOM/dimgs/4.jpg" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/../untitled/.tmp/" />
     <ignored path="$PROJECT_DIR$/../untitled/temp/" />
@@ -21,72 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="3.9轮播图.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DOM/3.9轮播图.html">
+      <file leaf-file-name="3.13垂直导航菜单.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DOM/3.13垂直导航菜单.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1071">
-              <caret line="51" column="31" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="3.10滑动轮播图.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DOM/3.10滑动轮播图.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1260">
-              <caret line="60" column="22" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="3.10淡入淡出轮播图.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DOM/3.10淡入淡出轮播图.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="693">
-              <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jslib.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DOM/jslib.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="3.10无缝滑动轮播图.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DOM/3.10无缝滑动轮播图.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2205">
-              <caret line="106" column="15" lean-forward="true" selection-start-line="106" selection-start-column="15" selection-end-line="106" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="3.13拖拽.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DOM/3.13拖拽.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-523" />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="3.13放大镜.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DOM/3.13放大镜.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="105" column="39" selection-start-line="105" selection-start-column="39" selection-end-line="105" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="3.10动画.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DOM/3.10动画.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="238">
+              <caret line="38" column="12" lean-forward="true" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -94,11 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="3.10获取宽度.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DOM/3.10获取宽度.html">
+      <file leaf-file-name="3.7右键菜单.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DOM/3.7右键菜单.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="819">
-              <caret line="40" column="37" lean-forward="true" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
+            <state relative-caret-position="756">
+              <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -139,6 +74,7 @@
         <option value="$PROJECT_DIR$/DOM/3.10无缝滑动轮播图.html" />
         <option value="$PROJECT_DIR$/DOM/3.13拖拽.html" />
         <option value="$PROJECT_DIR$/DOM/3.13放大镜.html" />
+        <option value="$PROJECT_DIR$/DOM/3.13垂直导航菜单.html" />
       </list>
     </option>
   </component>
@@ -152,9 +88,9 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="54" />
+    <option name="x" value="50" />
     <option name="y" value="48" />
-    <option name="width" value="1179" />
+    <option name="width" value="1183" />
     <option name="height" value="660" />
   </component>
   <component name="ProjectView">
@@ -162,6 +98,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -174,11 +111,15 @@
               <item name="WebProject" type="462c0819:PsiDirectoryNode" />
               <item name="DOM" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="WebProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebProject" type="462c0819:PsiDirectoryNode" />
+              <item name="imgs" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -232,43 +173,34 @@
       <workItem from="1552203094133" duration="176000" />
       <workItem from="1552203294566" duration="4845000" />
       <workItem from="1552455382905" duration="3244000" />
+      <workItem from="1552698395938" duration="268000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63226000" />
+    <option name="totallyTimeSpent" value="68183000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="48" width="1179" height="660" extended-state="0" />
+    <frame x="50" y="48" width="1183" height="660" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14588635" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19949281" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32935154" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,7 +219,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/DOM/dimgs/test.html" />
     <entry file="file://$PROJECT_DIR$/html/2_html.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -341,9 +272,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="24" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -428,9 +356,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
           <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -473,9 +398,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
           <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -532,32 +454,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DOM/3.7右键菜单.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DOM/dimgs/test.html" />
     <entry file="file://$PROJECT_DIR$/html/2_html.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DOM/3.9选项卡.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-259">
-          <caret line="58" column="26" lean-forward="true" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DOM/3.9轮播图.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="51" column="31" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -568,10 +469,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DOM/3.10淡入淡出轮播图.html">
+    <entry file="file://$PROJECT_DIR$/DOM/3.10动画.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
+        <state relative-caret-position="175">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DOM/3.13放大镜.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="503">
+          <caret line="105" column="39" selection-start-line="105" selection-start-column="39" selection-end-line="105" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DOM/3.13拖拽.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-38" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DOM/3.10无缝滑动轮播图.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2205">
+          <caret line="106" column="15" lean-forward="true" selection-start-line="106" selection-start-column="15" selection-end-line="106" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -582,39 +502,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/DOM/3.10淡入淡出轮播图.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/DOM/3.10滑动轮播图.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
+        <state relative-caret-position="21">
           <caret line="60" column="22" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DOM/3.10无缝滑动轮播图.html">
+    <entry file="file://$PROJECT_DIR$/DOM/3.9轮播图.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2205">
-          <caret line="106" column="15" lean-forward="true" selection-start-line="106" selection-start-column="15" selection-end-line="106" selection-end-column="15" />
+        <state relative-caret-position="21">
+          <caret line="51" column="31" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DOM/3.13拖拽.html">
+    <entry file="file://$PROJECT_DIR$/DOM/3.9选项卡.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-523" />
+        <state relative-caret-position="-303">
+          <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="31" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DOM/3.10动画.html">
+    <entry file="file://$PROJECT_DIR$/DOM/3.7右键菜单.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="756">
+          <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DOM/3.13垂直导航菜单.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="38" column="12" lean-forward="true" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DOM/3.13放大镜.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="105" column="39" selection-start-line="105" selection-start-column="39" selection-end-line="105" selection-end-column="39" />
         </state>
       </provider>
     </entry>
