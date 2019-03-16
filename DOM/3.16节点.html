@@ -71,6 +71,24 @@
         var oFirst = first(oUl);
         oFirst.style.background = "red";
         console.log(oUl.children);
+
+         /*
+            节点操作
+            1.创建节点 createElement
+            2.插入节点（内部的后边） appendChild 
+            3.替换   replaceChild (newnode,oldnode)
+            4.删除   removeChild(); 只能通过父元素删除子元素
+            5.插入   insertBefore (newnode,refnode)
+        */
+        var oDiv2 = document.getElementById('div2');
+        var oH2 = document.createElement('h2');
+        var oP = document.getElementsByTagName('p')[0];
+        oH2.innerHTML = "haha";
+        // oDiv2.appendChild(oH2);
+        // oDiv2.replaceChild(oH2,oP);
+        // oDiv2.removeChild(oP);
+        oDiv2.insertBefore(oH2,oP);
+
     </script>
 
 </body>

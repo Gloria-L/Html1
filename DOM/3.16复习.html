@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        js数据类型
+            基本数据类型  string number boolean null undefined
+                null 空对象   getElementById() 返回空对象
+                undefined   变量定义了没有赋值
+            引用数据类型 
+                array
+                object
+            判断数组还是对象：
+                Array.isArray()
+                实例化对象 .constructor 返回构造函数
+                a instanceof Array 判断a是否是Array的一个实例化对象
+     -->
+     <script>
+        var a = 20;
+        var b = "sdfgh";
+        var c = null;
+        //typeof 是一个一元运算，放在一个运算数之前，运算数可以是任意类型。
+        //它返回值是一个字符串，该字符串说明运算数的类型。
+        //（typeof 运算符返回一个用来表示表达式的数据类型的字符串。 ）
+        console.log(typeof a)   //"number"
+        console.log(typeof b)   //"string"
+        console.log(typeof c);   //"object"
+        console.log(typeof undefined);    //"undefined"
+        console.log(typeof [1,2,3]);    //"object" 数组对象
+        console.log(typeof {name:'zs'});  //"object" 字符串对象
+        
+        console.log(Array.isArray([1,2,3]));
+        var arr = [1,2,3]; //new Array()
+        var obj1 = {
+            name:'zs'
+        }
+        console.log(arr.constructor == Array );
+        console.log( obj1 instanceof Array);  
+        //查看对象数据类型，instanceof 运算符用来测试一个对象在其原型链中是否存在一个构造函数的 prototype 属性。
+        // console.log()
+        //类   构造函数
+        function Person(){
+        }    
+        // 实例化对象
+        var p1 = new Person()
+    </script>
+
+</body>
+</html>

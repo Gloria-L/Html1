@@ -16,14 +16,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="3.13垂直导航菜单.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="3.13垂直导航菜单.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DOM/3.13垂直导航菜单.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="798">
-              <caret line="38" column="12" lean-forward="true" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
+            <state relative-caret-position="-800">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="3.16复习.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DOM/3.16复习.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="281">
+              <caret line="39" column="56" selection-start-line="39" selection-start-column="56" selection-end-line="39" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -74,6 +83,7 @@
         <option value="$PROJECT_DIR$/DOM/3.13拖拽.html" />
         <option value="$PROJECT_DIR$/DOM/3.13放大镜.html" />
         <option value="$PROJECT_DIR$/DOM/3.13垂直导航菜单.html" />
+        <option value="$PROJECT_DIR$/DOM/3.16复习.html" />
       </list>
     </option>
   </component>
@@ -172,15 +182,16 @@
       <workItem from="1552203094133" duration="176000" />
       <workItem from="1552203294566" duration="4845000" />
       <workItem from="1552455382905" duration="3244000" />
-      <workItem from="1552698395938" duration="1492000" />
+      <workItem from="1552698395938" duration="2215000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69407000" />
+    <option name="totallyTimeSpent" value="70130000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="50" y="48" width="1183" height="660" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19949281" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -217,13 +228,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/html/2_html.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DOM/3.9选项卡.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-259">
@@ -537,11 +541,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DOM/3.13垂直导航菜单.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="38" column="12" lean-forward="true" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
+        <state relative-caret-position="-800">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DOM/3.16复习.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="39" column="56" selection-start-line="39" selection-start-column="56" selection-end-line="39" selection-end-column="56" />
         </state>
       </provider>
     </entry>
