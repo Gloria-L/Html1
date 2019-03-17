@@ -5,11 +5,20 @@
     <title>Title</title>
 </head>
 <body>
-    <div>
-
+    <div id="div1">
+        haha
     </div>
+    <script src="jquery-1.12.4.js"></script>
     <script>
-
+        // $("#div1").css("background","red");
+        var $div1 = $("#div1");
+        // $div1.css();
+        var div1 = document.getElementById('div1');
+        // div1.css()
+        // jq对象 <->原生
+        // 转成原生对象的两种方法
+       console.log( $div1[0]);
+       console.log( $div1.get(0));
     </script>
 </body>
 </html>

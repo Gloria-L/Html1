@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        // 绑事件 等页面中所有的资源都加载完毕再执行
+        window.onload = function () {
+            var oDiv = document.getElementById('div1');
+            oDiv.onclick = function () {
+                console.log(1111);
+            }
+        }
+        // 绑定相同事件时 下面的会把上面的覆盖掉
+        window.onload = function () {
+            console.log(2222);
+        }
+        window.onload = function () {
+            console.log(3333);
+        }
+        // 文档就绪函数 等页面中文档结构加载完就执行 不等资源
+        // 调用方法 两个方法都可以保留 绑定多个
+        $(document).ready(function () {
+            console.log(4444);
+        });
+        $(document).ready(function () {
+            console.log(5555);
+        });
+    </script>
+</head>
+<body>
+    <div id="div1">
+
+    </div>
+</body>
+</html>
