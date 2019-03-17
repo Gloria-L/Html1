@@ -97,8 +97,9 @@
     oNext.onclick = function(){
         iNow++;
         if(iNow == aImg.length){
+            //迅速拖拽到第一张图
             oImgBox.style.left = 0;
-            // 显示索引是1的图片
+            // 显示索引是1的图片 也就是第二张图
             iNow = 1;
         }
         change(iNow);
@@ -107,7 +108,7 @@
         iNow--;
         if(iNow < 0) {
             oImgBox.style.left = - (aImg.length - 1) * 950 + "px";
-            iNow = aLi.length - 2;
+            iNow = aImg.length - 2;
         }
         change(iNow);
     }
@@ -120,11 +121,8 @@
         for(var i=0; i<aLi.length; i++){
             aLi[i].className = "";
         }
-        aLi[num==aLi.length?0:num].className = "active";
+        aLi[num==(aLi.length)?0:num].className = "active";
     }
 </script>
-
-
-
 </body>
 </html>

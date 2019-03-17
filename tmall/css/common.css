@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    /*text-decoration 属性规定添加到文本的修饰*/
+}
+
+.wapper{
+    width: 1230px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.clearfix::after{
+    /*content 属性与 :before 及 :after 伪元素配合使用，来插入生成内容*/
+    content: '';
+    /*此元素将显示为块级元素，此元素前后会带有换行符*/
+    display: block;
+    /*clear 属性规定元素的哪一侧不允许其他浮动元素*/
+    clear: both;
+}
