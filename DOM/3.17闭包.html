@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--闭包条件
+        1.外部函数里面有内部函数
+        2.内部函数引用外部函数中的局部不变量或者参数
+        闭包好处
+        1.使外部函数中的变量长期驻扎在内存中（一直一直存在）
+        2.获取索引
+        闭包缺点
+        长时间不释放内存，闭包形成过多占用内存内存溢出
+    -->
+    <script>
+        //js的作用域：全局作用域，函数作用域（只有函数里面声明的不能在外面被调用）
+        function a() {
+            var x = 1;
+            console.log(x);
+        }
+        a();
+        //当a执行完毕时，x被垃圾回收
+        //闭包
+        //外部函数里有内部函数，内部函数要使用外部函数的局部变量时，使该变量不会被释放
+        function b() {
+            var x = 10;
+            function c() {
+                console.log(x);
+            }
+            c();
+        }
+        b();  //10不会被释放
+
+        //函数的立即调用
+        // i=0形成一次 i=1一次 i=2一次
+        var aLi = document.getElementsByTagName('li');
+        for (var i = 0; i < aLi.length; i++) {
+            //只要有函数就有一层作用域
+            (function(i){
+                // 外部函数中的形参  局部
+                aLi[i].onclick = function () {
+                    // 内部函数引用外部函数中的形参i 这使得这个i在外部函数执行完以后不会释放
+                    console.log(i);
+                }
+            })(i);  //此处i为实参
+            // aLi[i].onclick = function () {
+            //     console.log(i);
+            // }
+        }
+    </script>
+</body>
+</html>

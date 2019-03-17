@@ -46,6 +46,7 @@
             console.log("事件源",e.target);  //事件源
         }
 
+        //方法调用模式
         //对象自己即为this指向
         var oBj = {
             name:'zs',
@@ -67,8 +68,12 @@
         * call() 第一个参数是this指向的对象
         * apply() 第一个参数是this指向的对象
         * bind()  第一个参数是this指向的对象    不会调用
+        * 所有函数对象都有两个方法：apply和call，
+        * 这两个方法可以让我们构建一个参数数组传递给调用函数，也允许我们改变this的值
         * 传参不一样
         * bind不调用
+        * bind()方法是在Function.prototype上的一个方法，当被绑定函数执行时，
+        * bind方法会创建一个新函数，并将第一个参数作为新函数运行时的this
         */
         a.call(obj,3,5);
         a.apply(obj,[3,5]);
