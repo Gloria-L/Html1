@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: rebeccapurple;
+        }
+        #div2{
+            width: 100px;
+            height: 100px;
+            background: lightpink;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        事件流
+     -->
+    <div id="div1">
+        <div id="div2"></div>
+    </div>
+
+    <script>
+        var oDiv1 = document.getElementById('div1');
+        var oDiv2 = document.getElementById('div2');
+        // oDiv.onclick = function(){
+        //     console.log(111);
+        // }
+        // oDiv.onclick = function(){
+        //     console.log(222);
+        // }
+
+        // 冒泡还是捕获   冒泡false
+        // oDiv.addEventListener('click',function(){
+        //     console.log(222);
+        // },false);
+        // oDiv1.addEventListener('click',function(){
+        //     console.log(111);
+        // },false);
+        // oDiv2.addEventListener('click',function(){
+        //     console.log(222);
+        // },false);
+
+        // 事件冒泡 从里向外 子元素上升到父元素身上
+        oDiv1.addEventListener('click',function(){
+            console.log(111+"捕获");
+        },true);
+        oDiv2.addEventListener('click',function(){
+            console.log(222+"捕获");
+        },true);
+        // 事件捕获  从外到里 (ie不支持事件捕获)
+        oDiv1.addEventListener('click',function(){
+            console.log(111+"冒泡");
+        },false);
+        oDiv2.addEventListener('click',function(){
+            console.log(222+"冒泡");
+        },false);
+        // 当既有捕获又有冒泡时  先捕获再冒泡 （先从外到里 再从里往外）
+        //false 冒泡 true 捕获
+        //111捕获 222捕获 222冒泡 111冒泡
+    </script>
+</body>
+</html>

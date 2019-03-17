@@ -30,7 +30,7 @@
             previousSibling
             firstChild
             lastChild
-            children
+            children 取到所有的元素节点
         */
         var oLi1 = document.getElementById('li1');
         var oLi2 = document.getElementById('li2');
@@ -75,10 +75,10 @@
          /*
             节点操作
             1.创建节点 createElement
-            2.插入节点（内部的后边） appendChild 
-            3.替换   replaceChild (newnode,oldnode)
-            4.删除   removeChild(); 只能通过父元素删除子元素
-            5.插入   insertBefore (newnode,refnode)
+            2.插入节点（内部的后边） 父元素.appendChild
+            3.替换   父元素.replaceChild (newnode,oldnode)
+            4.删除   父元素.removeChild(); 只能通过父元素删除子元素
+            5.插入   父元素.insertBefore (newnode,refnode)
         */
         var oDiv2 = document.getElementById('div2');
         var oH2 = document.createElement('h2');

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul{
+            background: #999999;
+        }
+        li{
+            background: #112233;
+        }
+    </style>
+</head>
+<body>
+    <ul id="ul1">
+        <button id="btn">Button</button>
+        <li>111</li>
+        <li>222</li>
+        <li>333</li>
+    </ul>
+    <script>
+        var aLi = document.getElementById('li');
+        var oBtn = document.getElementById('btn');
+        var oUl = document.getElementById('ul1');
+        for (var i = 0;i<aLi.length;i++){
+            aLi[i].onclick = function () {
+                console.log(this.innerHTML);
+            }
+        }
+        oBtn.onclick = function () {
+            var oLi = document.createElement('li');
+            oLi.innerHTML = Math.random();
+            oUl.appendChild(this.innerHTML);
+        }
+        // 事件委托 将事件绑定到已经存在的父元素身上，点击子元素时会有事件冒泡，
+        // 会触发父元素的点击事件，此时通过事件源e.target来判断点击的是否为li
+        // **解决后生成元素的事件绑定问题**
+        // 只绑定一个事件
+        // 如果点击的是li才去进行下一步的任务
+        // 点了谁导致的事件，谁就是事件源，而执行该事件的绑定对象为this
+        oUl.onclick = function(e){
+            e = e || window.event;
+            // console.log(111)
+            var target = e.target || e.srcElement;
+            // console.log(target.tagName)
+            if(target.tagName == 'LI'){  //如果事件源是li则进行下一步操作
+                console.log(target.innerHTML);
+            }
+        }
+        oBtn.onclick = function(){
+            var oLi = document.createElement('li');
+            oLi.innerHTML = Math.random();
+            oUl.appendChild(oLi);
+        }
+        }
+    </script>
+
+</body>
+</html>

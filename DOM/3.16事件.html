@@ -31,14 +31,16 @@
     <a id="link" href="http://www.baidu.com">百度一下，你就知道！</a>
     <script>
         var oDiv = document.getElementById('div1');
+        //谁点击事件谁是事件源
         oDiv.onclick = function (e) {
             console.log(e.clientX);
             // 点击事件中 谁的点击事件 this
             console.log(this); //div1
-            console.log(e.target); //div2 事件源
+            console.log(e.target||e.srcElement); //div2 事件源，兼容性写法 e.target||e.srcElement
         }
         var oA = document.getElementById('link');
         oA.onclick = function (e) {
+            e = e || window.event; //兼容性写法 e || window.event
             console.log('dfghjkl');
             // 标准浏览器
             e.preventDefault();
@@ -47,6 +49,8 @@
             // 阻止默认行为
             // return false
         }
+
+
     </script>
 </body>
 </html>

@@ -33,14 +33,16 @@
         console.log(typeof undefined);    //"undefined"
         console.log(typeof [1,2,3]);    //"object" 数组对象
         console.log(typeof {name:'zs'});  //"object" 字符串对象
-        
+
+        //方法1
         console.log(Array.isArray([1,2,3]));
         var arr = [1,2,3]; //new Array()
         var obj1 = {
             name:'zs'
         }
-        console.log(arr.constructor == Array );
-        console.log( obj1 instanceof Array);  
+        //方法2
+        console.log(arr.constructor == Array ); //返回实例化对象的构造函数看是否是Array
+        console.log( obj1 instanceof Array);  //是否为实例化对象
         //查看对象数据类型，instanceof 运算符用来测试一个对象在其原型链中是否存在一个构造函数的 prototype 属性。
         // console.log()
         //类   构造函数

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: rebeccapurple;
+        }
+        #div2{
+            width: 100px;
+            height: 100px;
+            background: lightpink;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="div1">div1
+        <div id="div2">div2</div>
+    </div>
+    <script>
+        //this指向window
+        // function a() {  //window下面的a方法
+        //     console.log(this);
+        // }
+        // a();
+        function a(x,y){
+            console.log(this,x,y);
+        }
+
+        //this指向window
+        setInterval(function () {
+            console.log(this);
+        },20);//每20毫秒执行一次
+
+        //触发的是谁的事件，那么this就是谁
+        var oDiv1 = document.getElementById('div1');
+        oDiv1.onclick = function (e) {
+            console.log(this);
+            console.log("事件源",e.target);  //事件源
+        }
+
+        //对象自己即为this指向
+        var oBj = {
+            name:'zs',
+            age:30,
+            say:function () {
+                console.log(this);
+            }
+        }
+        oBj.say();
+
+        //构造函数中this为声明的实例化对象
+        function Person(name) {
+            this.name = name
+        }
+        var person1 = new Person('zs');
+
+        //改变this指向的方式
+        /*
+        * call() 第一个参数是this指向的对象
+        * apply() 第一个参数是this指向的对象
+        * bind()  第一个参数是this指向的对象    不会调用
+        * 传参不一样
+        * bind不调用
+        */
+        a.call(obj,3,5);
+        a.apply(obj,[3,5]);
+        a.bind(obj,3,5)();
+        //a();
+    </script>
+
+</body>
+</html>
