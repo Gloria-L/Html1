@@ -15,6 +15,7 @@
             DOM对象
      -->
     <script>
+        // 对象定义方法
         // var obj = {
         //     name:'zs',
         //     age:20,
@@ -24,7 +25,7 @@
         // }
         // obj.eat();
         // 声明类 属性写在构造函数中 方法写在原型下
-        function Person(name,age) {
+        function Person(name,age) {  //类名大写
             // this.name = "zs";
             // this.age = 30;
             this.name = name;
@@ -39,14 +40,14 @@
         * js中每个数据类型都是对象（除了null和undefined），而每个对象都继承自另外一个对象，
         * 后者称为“原型”（prototype）对象，只有null除外，它没有自己的原型对象
         */
-
-        Person.prototype.sleep = function () {
+        //只要添加一个对象，就一定会new出来一个function，浪费内存，所以把属性写在构造函数中，方法写在原型下
+        Person.prototype.sleep = function () {  //取到原型对象，使用其方法一定写在原型下
             console.log(this.name + " 呼呼～～")
         }
         Person.prototype.eat = function () {
             console.log(this.age + " 使劲吃！")
         }
-        var p1 = new Person("wangwu",18);
+        var p1 = new Person("wangwu",18);  //new一个对象，new的时候才会执行类的function
         p1.sleep();  //调用才会执行
         var p2 = new Person("zhaoliu",30);
         p2.eat();

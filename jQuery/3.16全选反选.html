@@ -25,8 +25,23 @@
     <script src="jquery-1.12.4.js"></script>
     <script>
         // on 用来绑事件
-        $('#CheckedAll').on('click',function () {
-            console.log(111)
+        $('#CheckedAll').on('click',function(){
+            // console.log(111)
+            $(":checkbox").prop("checked",true);
+        })
+        $('#CheckedNo').on('click',function(){
+            // console.log(111)
+            $(":checkbox").prop("checked",false);
+        })
+        $('#CheckedRev').on('click',function(){
+            // 取值的时候 取到的是集合中的第一个
+            console.log( $(":checkbox").prop("checked"));
+            $(":checkbox").each(function(index,ele){
+                // 第一个参数代表索引 第二个参数代表dom元素
+                // console.log(index,ele);
+                ele.checked = !ele.checked;
+                // $(ele).prop("checked", !$(ele).prop("checked"))
+            })
         })
 
     </script>

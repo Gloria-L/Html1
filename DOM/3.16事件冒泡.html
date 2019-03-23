@@ -48,6 +48,7 @@
         // },false);
 
         // 事件冒泡 从里向外 子元素上升到父元素身上
+        // 点击子元素时会触发父元素的事件 先子元素后父元素
         oDiv1.addEventListener('click',function(){
             console.log(111+"捕获");
         },true);
@@ -55,6 +56,7 @@
             console.log(222+"捕获");
         },true);
         // 事件捕获  从外到里 (ie不支持事件捕获)
+        // 点击子元素时 先父元素后子元素
         oDiv1.addEventListener('click',function(){
             console.log(111+"冒泡");
         },false);

@@ -39,7 +39,12 @@
             console.log(this);
         },20);//每20毫秒执行一次
 
-        //触发的是谁的事件，那么this就是谁
+        //定时器this指向window
+        setTimeout(function () {
+            console.log(this);
+        },100);
+
+        //事件中，触发的是谁的事件，那么this就是谁
         var oDiv1 = document.getElementById('div1');
         oDiv1.onclick = function (e) {
             console.log(this);
@@ -57,7 +62,7 @@
         }
         oBj.say();
 
-        //构造函数中this为声明的实例化对象
+        //构造函数中this指向的为声明的实例化对象
         function Person(name) {
             this.name = name
         }
@@ -79,6 +84,38 @@
         a.apply(obj,[3,5]);
         a.bind(obj,3,5)();
         //a();
+        /*
+        // 1.普通函数  指向window
+
+        function a(){
+            console.log(this)
+        }
+        a();
+        // 2.定时器  指向window
+        setTimeout(function(){
+            console.log(this);
+        }, 100);
+        // 3.对象  obj
+        var obj = {
+            name:'zs',
+            age:30,
+            say:function(){
+                console.log(this);
+            }
+        }
+        obj.say();
+        // 4 事件中
+        var oDiv1 = document.getElementById('div1');
+        oDiv1.onclick = function(){
+            console.log(this);
+        }
+        // 5类中 实例化对象
+        function Person(name){
+            this.name = name
+        }
+        var p1 = new Person('zs');
+        var p2 = new Person('lisi');
+        */
     </script>
 
 </body>

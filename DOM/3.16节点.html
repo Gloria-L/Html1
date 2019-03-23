@@ -16,7 +16,7 @@
     <!-- dftgyhujk -->
     <script>
         var oDiv1 = document.getElementById('div1');
-        // console.log(oDiv1.nodeType);
+        // console.log(oDiv1.nodeType); //
         // console.log(oDiv1.firstChild.nodeType);
         // console.log(oDiv1.nodeName); //DIV
         // console.log(oDiv1.firstChild.nodeName);  //#text
@@ -24,13 +24,14 @@
         // console.log(oDiv1.firstChild.nodeValue);  //#text
         // 节点遍历
         /* 
-            nextSibling    nextElementSibling
+            下一个节点（之后的兄弟节点）nextSibling
+            之后的兄弟元素节点nextElementSibling
             在标准浏览器下会取到文本节点（回车     ）;
             ie浏览器下  找到的是下一个元素节点
-            previousSibling
-            firstChild
-            lastChild
-            children 取到所有的元素节点
+            上一个节点previousSibling
+            第一个孩子firstChild
+            最后一个孩子lastChild
+            所有孩子children 取到所有的元素节点
         */
         var oLi1 = document.getElementById('li1');
         var oLi2 = document.getElementById('li2');
@@ -74,17 +75,17 @@
 
          /*
             节点操作
-            1.创建节点 createElement
-            2.插入节点（内部的后边） 父元素.appendChild
-            3.替换   父元素.replaceChild (newnode,oldnode)
+            1.创建节点 createElement()
+            2.插入节点（内部的后边） 父元素.appendChild()
+            3.替换   父元素.replaceChild(newnode,oldnode)
             4.删除   父元素.removeChild(); 只能通过父元素删除子元素
-            5.插入   父元素.insertBefore (newnode,refnode)
+            5.插入   父元素.insertBefore(newnode,refnode) 插入到谁的前面
         */
         var oDiv2 = document.getElementById('div2');
         var oH2 = document.createElement('h2');
-        var oP = document.getElementsByTagName('p')[0];
-        oH2.innerHTML = "haha";
-        // oDiv2.appendChild(oH2);
+        var oP = document.getElementsByTagName('p')[0];  //标签取到的内容为一个数组
+        oH2.innerHTML = "haha";   //属性设置或返回表格行的开始和结束标签之间的 HTML
+        // oDiv2.appendChild(oH2);  //插入节点
         // oDiv2.replaceChild(oH2,oP);
         // oDiv2.removeChild(oP);
         oDiv2.insertBefore(oH2,oP);

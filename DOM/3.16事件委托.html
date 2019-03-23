@@ -32,7 +32,7 @@
             }
         }
         oBtn.onclick = function () {
-            var oLi = document.createElement('li');
+            var oLi = document.createElement('li');  //创建一个元素
             oLi.innerHTML = Math.random();
             oUl.appendChild(this.innerHTML);
         }
@@ -42,6 +42,10 @@
         // 只绑定一个事件
         // 如果点击的是li才去进行下一步的任务
         // 点了谁导致的事件，谁就是事件源，而执行该事件的绑定对象为this
+
+        //1.事件绑定在父元素身上
+        //2.点击子元素的时候 通过事件冒泡会触发父元素的点击事件
+        //3.通过事件源判断点击事件
         oUl.onclick = function(e){
             e = e || window.event;
             // console.log(111)

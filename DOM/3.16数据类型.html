@@ -16,11 +16,11 @@
         console.log(b); //"abc":存在栈内存中
 
         //引用数据类型
-        var arr = [1,2,3];//存一个地址
-        var arr1 = arr;//存arr指向的地址
+        var arr1 = [1,2,3];//存一个地址
+        var arr2 = arr1;//存arr指向的地址
 
-        arr[0] = 666；
-        console.log(arr1);//存在堆内存中
+        arr1[2] = 666;
+        console.log(arr2);//存在堆内存中
     </script>
 </body>
 </html>
