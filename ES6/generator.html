@@ -8,7 +8,35 @@
 </head>
 <body>
     <script>
-        
+        //generator解决异步编程
+        function *fn (){
+            console.log('Begin!');
+            yield "hahahahahaha";
+            console.log('yield 1 end');
+        }
+
+        //返回的是指针对象 而不会执行函数内部逻辑
+        //调用next方法函数内部逻辑而开始执行，遇到yield表达式停止
+        let a = fn();
+        a.next(); //{value:"hahahahahaha",done:false}
+        a.next(); //{value:undefined,done:true}
+
+        function *fn(){
+            console.log('Begin!');
+            yield request1();
+            console.log('Request 1 has success,ready for request 2');
+        }
+        let f = fn();
+        f.next();  //next的返回值是yield reques1()的返回值,{value:undefined,done:false}
+
+        function request1(){
+            //模拟异步请求
+            setTimeout(()=> {
+                let data = 100;
+                console.log('Request 1 success,return data');
+                f.next();//{value:undefined,done:true}
+            },1000);
+        }
     </script>
 </body>
 </html>
