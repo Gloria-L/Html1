@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script src="../jQuery/jquery-1.12.4.js"></script>
+    <script>
+        //Ajax请求为异步
+        //先haha返回后返回json
+        /*
+        $.get('test.json',function (data){
+            console.log(data);
+
+        },'json');
+
+        console.log('haha');
+        */
+
+        //回调地狱，异步一层一层嵌套
+        $.get('xx.json',function (id){
+            console.log(id);
+
+        },'json');
+    </script>
+</body>
+</html>

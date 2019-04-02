@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>
+            111
+        </li>
+        <li>
+            222
+        </li>
+    </ul>
+    <script>
+        //...扩展运算符：它用于把一个数组转化为用逗号分隔的参数序列
+        //它常用在不定参数个数时的函数调用，数组合并等情形
+        /*
+        let arr = [1,2,3];
+        let arr2 = [...arr];
+        let arr3 = [1,2,3];
+        let arr4 = [4,5,6];
+        let arr5 = [...arr3,...arr4];
+        let arr6 = ['a','b',...arr3];
+
+        console.log(arr2);  //1,2,3
+        console.log(arr5);  //1,2,3,4,5,6
+        console.log(arr6);  //"a","b",1,2,3
+        */
+
+        //类数组转成数组
+        /*
+        var aLi = document.getElementsByTagName('li');
+        //aLi.push(1);
+        console.log(aLi);
+        var arr = [...aLi];
+        console.log(arr);
+        arr.push(1);
+        console.log(arr); //[li, li, 1]
+        */
+
+        //相同属性覆盖，不同属性往后添加
+        /*
+        let obj1 = {
+            name:'zs',
+            age:20
+        }
+        let obj2 = {
+            name:'lisi',
+            school:'weihcunag'
+        }
+        let obj = {...obj1,...obj2};
+        console.log(obj);
+        function fn(){
+            // console.log(a,b,c,d);
+            console.log(arguments);
+            // 函数递归调用
+            // fn();
+            arguments.callee();
+            console.log(arguments.callee);
+        }
+        */
+
+        //rest用在函数型参里
+        function fn(a,b,...rest){
+            console.log(rest);
+        }
+        fn(1,2,3,4);
+    </script>
+</body>
+</html>

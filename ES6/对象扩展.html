@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var obj1 = {
+            name, //同名属性可以省略不写
+
+        }
+
+        let a = 'xx'; //起名xx
+        var obj2 = {
+            [a]:'yyy'
+        }
+        console.log(obj2.xx);
+        console.log(obj2[a]);  //属性是可变的，需要加[]
+
+        console.log(NaN == NaN);
+        console.log(+0 === -0);
+        console.log(Object.is(NaN,NaN));
+        console.log(Object.is(+0,-0));
+
+        let obj4 = {
+            name:'cindy',
+            age:14
+        }
+        let obj5 = {
+            name:'jack',
+            hobby:'computer'
+        }
+
+        //console.log({...obj4,...obj5});
+        //5合到4上直接全改了(后边的往前边去合)
+        //{name: "jack", age: 14, hobby: "computer"}
+        console.log(Object.assign(obj4,obj5));
+        //此处obj4已被修改
+        console.log(obj4);
+        console.log(obj5);
+
+    </script>
+</body>
+</html>

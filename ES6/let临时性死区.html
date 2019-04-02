@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //在当前函数作用域let一个变量，那么外面的同名变量不能进来
+        /*
+        let a = 10;
+        function f() {
+            //此处不会有a=10进来，且let没有变量提升，控制台显示a is not defined
+            //console.log(a);
+            let a = 20;
+            console.log(a);
+        }
+        f();
+        */
+
+        /*
+        var x = 100;
+        function f() {
+            //此处虽然在当前作用域有变量x的提升但只声明无赋值，则x为undefined
+            //若直接console.log(x)，没有var x，则直接输出100
+            console.log(x);
+            var x = 20;
+        }
+        f();
+        */
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*如果你的动作不好使 重制一下touchaction即可*/
+        /**{*/
+            /*touch-action: none;*/
+        /*}*/
+
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: brown;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+    </div>
+    <script src="zepto.js"></script>
+    <script src="touch.js"></script> <!--作为zepto的类库，一定写在下面-->
+    <script>
+        //点击事件 一般使用tap
+        //因为移动端click会有300ms延时 300ms内再次点击会默认为是双击事件
+        // $('#div1').on('click',function () {
+        //     console.log('div1 click');
+        // })
+        //zepto封装的事件（冒泡到document）
+        $('#div1').on('tap',function () {
+            console.log('div1 tap');
+        })
+        //单击
+        $('#div1').on('singleTap',function () {
+            console.log('div1 singleTap');
+        })
+        //双击
+        $('#div1').on('doubleTap',function () {
+            console.log('div1 doubleTap');
+        })
+        //长按
+        $('#div1').on('longTap',function () {
+            console.log('div1 longTap');
+        })
+        // $('#div1').on('touchstart',function () {
+        //     console.log('div1 tap');
+        // })
+        // $('#div1').on('touchend',function () {
+        //     console.log('div1 tap');
+        // })
+        // $('#div1').on('touchmove',function () {
+        //     console.log('div1 tap');
+        // })
+        // //touch 取消事件
+        // $('#div1').on('touchcancel',function () {
+        //     console.log('div1 tap');
+        // })
+        //滑动事件
+        $('#div1').on('swipe',function () {
+            console.log('div1 swipe');
+        })
+        $('#div1').on('swipeLeft',function () {
+            console.log('div1 swipeLeft');
+        })
+        $('#div1').on('swipeUp',function () {
+            console.log('div1 swipeUp');
+        })
+        $('#div1').on('swipeRight',function () {
+            console.log('div1 swipeRight');
+        })
+        $('#div1').on('swipeDown',function () {
+            console.log('div1 swipeDown');
+        })
+    </script>
+
+</body>
+</html>

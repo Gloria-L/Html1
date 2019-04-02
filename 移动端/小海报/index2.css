@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h3{
+    width: 960px;
+    height: 100px;
+    background: #999999;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 100px;
+    margin-top: 50px;
+}
+#img-box{
+    width: 960px;
+    margin: 0 auto;
+}
+#img-box img{
+    display: none;
+    width:100%;
+}
+#img-box .big{
+    display: block;
+}
+#content{
+    width: 960px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+/*
+多行文本垂直居中
+父元素display：table
+子元素display：table-cell;
+vertical-align:middle
+*/
+#left{
+    width: 630px;
+    float: left;
+    background: darksalmon;
+}
+#right{
+    width: 300px;
+    float: right;
+    background: lightseagreen;
+}
+#left{
+    display: table;
+}
+p{
+    display: table-cell;/*此元素会作为一个表格单元格显示*/
+    vertical-align: middle;/*把此元素放置在父元素的中部*/
+    text-align: center;/*文字居中*/
+}
+
+@media screen and (max-width:960px){
+    h3{
+        width:100%;
+    }
+    #img-box{
+        width:100%;
+    }
+    #content{
+        width:100%;
+    }
+    #left{
+        width:66%;
+    }
+    #right{
+        width:31%;
+    }
+    #img-box{
+        height: 0px;
+        padding-top: 56%;
+        background-image: url("img/01_s_2x.jpg");
+    }
+
+}
+@media screen and (max-width:480px){
+    #left,#right{
+        width:100%;
+    }
+    #img-box{
+        background-image: url("img/01_s.jpg");
+    }
+}

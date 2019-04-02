@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let obj = {
+            name:'mary',
+            age:18
+        }
+        //新的原始数据类型Symbol，表示独一无二的值
+        //可以保证不会与其他属性名产生冲突
+        let name = Symbol();
+        let age = Symbol();
+
+        let xx = Symbol('y');
+
+        obj[xx] = 'yyy';
+        //该属性不会出现在for...in、for...of循环中
+        obj[Symbol('z')] = 'zzzz';
+        obj.name = 'fghjk';
+        console.log(obj);
+        for( key in obj){
+            console.log(obj[key]);
+        }
+    </script>
+</body>
+</html>

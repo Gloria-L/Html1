@@ -1,0 +1,15 @@
+body{
+    font-size: .32rem;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+#nav{
+    background: lightseagreen;
+    display: flex;
+    height: 1.01rem;
+}
+.adress{
+    
+}

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var aLi = document.getElementsByTagName('li');
+        // // [...aLi]
+        // console.log(Array.from(aLi));
+        // var arr = [1,2,3];
+        //同 类数组转为数组
+        // var arr2 = new Array(3);
+        // console.log(arr,arr2);
+        // console.log(Array.of(3));
+        //     var arr = [1,2,3,4,5,6,7];
+        //     console.log(arr);
+        //    console.log( arr.copyWithin(0,2,5) );
+        // var arr = ['a', 'b', 'c', 'd', 'e'];
+        //从数组中找到第一个符合条件的成员
+        /*
+        var x = arr.find(function(val,index,arr){
+            console.log(val,index)
+            return index > 2;
+        })
+        // console.log(x);
+        */
+
+        // console.log(new Array(3).fill(7) );
+        var arr = ['a', 'b', 'c', 'd', 'e'];
+        // for(val of arr){
+        //     console.log(val);
+        // }
+        for ([index, value] of arr.entries()) {
+            console.log(index, value);
+        }
+        arr.forEach(function (val, index, arr) {
+            console.log(val, index);
+        })
+        var xxx = arr.map(function (val, index) {
+            return val + "xx";
+        });
+        console.log(xxx);
+        var persons = [{
+            name: 'zs',
+            age: 20
+        }, {
+            name: 'lisi',
+            age: 30
+        }, {
+            name: "wangwu",
+            age: 18
+        }]
+        var yyy = arr.filter(function (val, index) {
+            return index > 2;
+        })
+        console.log(yyy);
+        //过滤出每一个符合条件的对象
+        var zzz= persons.filter(function(obj,index){
+            return obj.age>=20;
+        })
+        console.log(zzz);
+
+        let arr5 = ['a','b','c','d','e'];
+        //取元素
+        fro(val of arr){
+            console.log(val);
+        }
+        //取索引
+        fro(val of arr.keys()){
+            console.log(val);
+        }
+        //全取
+        fro(val of arr.entries()){
+            console.log(val);
+        }
+        //全取并解构
+        fro([index,val] of arr.entries()){
+            console.log(index,val);
+        }
+        arr5.forEach(function (val,index) {
+            console.log(val,index)
+        });
+        arr5.map()
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //从数组和对象中提取值，对变量进行赋值，这被称为解构
+        //1.数组解构
+        //2.对象解构
+        //3.字符串解构
+        //4.应用:函数参数的解构赋值\函数返回值\变量互换\Json应用
+
+        //把1，2，3的值赋给a，b，c
+        let arr = [1,2,3];
+        /*
+        let [a,b,c] = arr;
+        console.log(a);
+        console.log(b);
+        console.log(c);
+        */
+
+        //输出1 2 (2) [3, 4] 5
+        //其中对于f：0是3，1是4，length为2
+        /*
+        let arr2 = [1,2,[3,4],5];
+        let [a,b,f,e] = arr2;
+        console.log(a,b,f,e);
+        */
+
+        //赋值是按属性名称赋值，与顺序无关
+        /*
+        let obj = {
+            name:'zs',
+            age:20
+        }
+        let {age,name} = obj;
+        //或者
+        //let name = obj.name;
+        //let age = obj.age;
+        console.log(name,age);
+        //可以用别名代替相同属性名的属性
+        let {name:xx,age} = obj;
+        console.log(xx,age);
+        */
+
+        //给a，b赋值
+        /*
+        let str = '1234';
+        let [a,b] = str;
+        console.log(a,b);
+        */
+
+        /*
+        var obj = {
+            name:'z',
+            age:'10',
+            say:function(){
+                console.log('dfghjk')
+            },
+            eat:function(){
+            }
+        }
+        let {name,eat} = obj;
+        console.log(name);
+        eat();
+        function fn([a,b]){
+            console.log(a,b);
+        }
+        fn([1,2,3])
+        */
+
+        // 变量互换
+
+        // let a = 5;
+        // let b = 6;
+        //
+        // let c = a;
+        // a = b;
+        // b = c;
+        //
+        // a = a+b;
+        // b = a-b;
+        // a = a-b;
+        //
+        // [b,a] = [a,b];
+
+        a = [b, b=a][0];
+        console.log(a,b);
+
+    </script>
+</body>
+</html>

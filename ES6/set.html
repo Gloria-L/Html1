@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [1,2,3,2,3,4,5,1];
+        console.log(arr);
+        //数组去重成为类数组
+        let arr2 = new Set(arr);
+        console.log(arr2);
+        //转成正常数组
+        let arr3 = [...arr2];
+        let arr4 = Array.from(arr2);
+        console.log(arr3);
+        console.log(arr4);
+        //数组继续添加成员
+        let arr5 = new Set();
+        arr5.add(1);
+        console.log(arr5);
+        //数组清除成员
+        arr5.clear();
+        console.log(arr5);
+        //取长度
+        console.log(arr5.size);
+    </script>
+</body>
+</html>

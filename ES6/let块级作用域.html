@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>111</li>
+        <li>222</li>
+        <li>333</li>
+    </ul>
+
+    <script>
+
+        var aLi = document.getElementsByTagName('li');
+        //此处onclick点击事件和循环时间不一样，控制台显示3（已完成循环）
+        /*
+        for (var i=0;i<aLi.length;i++) {
+            aLi[i].onclick = function () {
+                console.log(i);
+            }
+        }
+        */
+
+        //闭包解决i为3的问题，显示0，1，2
+        /*
+        for(var i=0; i<aLi.length; i++){
+            (function(num){
+                aLi[i].onclick = function(){
+                    console.log(num);
+                }
+            })(i);
+        }
+        */
+
+        //外部函数中有一个内部函数，内部函数要使用外部函数的变量，则该变量不会被释放
+        //let转到es5就是一个闭包
+        for(let i=0;i<aLi.length;i++){
+            aLi[i].onclick = function () {
+                console.log(i);
+            }
+        }
+    </script>
+</body>
+</html>

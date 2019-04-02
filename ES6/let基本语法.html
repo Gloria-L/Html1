@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        *  var 和 let 的区别：
+        *  1.不存在变量提升
+        *  2.不允许重复声明
+        *  3.块级作用域
+        *  4.临时失效区（暂时性死区）
+        * */
+
+        //变量提升 var声明的变量 会有变量提升 （当前作用域的最上边声明变量）
+        //即 在JavaScript 中，变量可以在使用后声明，也就是变量可以先使用再声明
+        /*
+        console.log(a);
+        var a = 10;
+        console.log(a);
+        */
+
+        //let变量没有变量提升
+        // b is not defined
+        /*
+        console.log(b);
+        let b = 10;
+        var a = 10;
+        var a = 20;
+        let a = 10;
+        let a = 20;
+        console.log(a);
+        */
+
+        // 全局作用域和函数作用域
+        // 访问变量时 当前作用域中找，如果当前作用域内没有则找上一层（父作用域），
+        // 如果父作用域中也没有，则继续向上找。。。直到找到window层，假如在window层中也找不到，
+        // 则返回not defined
+        /*
+        var z = 30;
+        function f() {
+            var x = 10;//局部变量
+            y = 20;//全局变量
+        }
+        f();
+        //console.log(x);//局部变量无法访问，会报错
+        console.log(y);
+        */
+        /*
+        var c = 1
+        function fn1(){
+            // var a = 10;
+            function fn2(){
+                var b = 20;
+                // var a = 30;
+                console.log(z);
+            }
+            fn2();
+        }
+        fn1();
+        */
+
+        var x = true;
+        if(x){
+            let a = 10;
+            console.log(a);
+        }
+        //a is not defined
+        console.log(a);
+    </script>
+</body>
+</html>

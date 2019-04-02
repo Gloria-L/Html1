@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: lightpink;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">this test is ready</div>
+    <script>
+        //箭头函数 => 定义匿名函数
+        fn();
+        fn1();
+
+        function fn() {
+            console.log(111);
+        }
+        var fn1 = function () {
+            console.log(222);
+        };
+        let fn = () =>{
+
+        }
+
+        // var oDiv = document.getElementById('div1');
+        // oDiv.onclick = function(){
+        //     // this
+        //     setTimeout(function(){
+        //         console.log(this.innerHTML);
+        //     }.bind(this),1000);
+        // }
+
+        //普通函数中的this指向的是调用时的this
+        //箭头函数中的this指向的是声明时的this
+        //父作用域中的this若还是箭头函数，继续找父作用域
+
+
+        // oDiv.onclick = function(){
+        //     // this
+        //     setTimeout(() => {
+        //         console.log(this.innerHTML);
+        //     },1000);
+        // }
+
+        // var obj = {
+        //     name:'zs',
+        //     age:20,
+        //     say:() => {
+        //         console.log(this);
+        //     }
+        // }
+
+        var xx = 1;
+        var obj = {
+            name:'zs',
+            age:20,
+            xx:2,
+            say:() =>{
+                setTimeout(() => {
+                    console.log(this.xx);
+                },1000);
+            }
+        }
+
+        obj.say();
+        //箭头函数不能用做构造函数
+        // function Person(name){
+        //     this.name = name;
+        // }
+        // var p1 = new Person('zs');
+        // let Person = (name) => {
+        //     this.name = name;
+        // }
+        // let p1 = new Person();
+        // let a = (...rest) => {
+        //     // console.log(arguments);
+        //     console.log(rest);
+        // }
+        // a(1,2,3);
+        // 默认值  没有传参 或者传的参数是undefined
+        /*
+        let a = (a,b,c=100) => {
+            console.log(a,b,c);
+        }
+        a(1,2,undefined);
+        console.log(a.name);
+        */
+        let a = x => x;
+        let a = (x) => {
+            return x;
+        }
+        //赋值1
+        let a = (x=1) => {
+            return x;
+        }
+        console.log(a());
+    </script>
+</body>
+</html>

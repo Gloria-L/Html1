@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/*page1样式开始*/
+.page-1{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0; /*该属性定义了定位元素下外边距边界与其包含块下边界之间的偏移*/
+    background: #083846;
+}
+.page-1 .img1{
+    width: 248px;
+    position: absolute;
+    left: 50%;
+    margin-left: -124px; /*直接写死，避免重写*/
+    top: 5%;
+}
+.page-1 .img2{
+    width: 248px;
+    position: absolute;
+    left: 50%;
+    margin-left: -124px;
+    bottom: 17%;
+}
+.page-1 .icon{
+    width: 40px;
+    position: absolute;
+    left: 50%;
+    margin-left: -20px;
+    bottom: 8%;
+}
+.hide{
+    display: none; /*隐藏第一页*/
+}
+/*page2样式开始*/
+.page-2{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #9261BF;
+}
+.page-2 .img1{
+    width: 200px;
+    position: absolute;
+    top: 4%;
+    left: 50%;
+    margin-left: -100px;
+}
+.page-2 .img2{
+    width: 248px;
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    margin-left: -124px;
+}
+.page-2 .img3{
+    width: 300px;
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    margin-left: -150px;
+}
+.page-2 .img4{
+    width: 248px;
+    position: absolute;
+    top: 34%;
+    left: 50%;
+    margin-left: -124px;
+}
+.page-2 .icon{
+    width: 40px;
+    position: absolute;
+    left: 50%;
+    margin-left: -20px;
+    bottom: 8%;
+}
+/*page动画*/
+/*下滑*/
+.moveFromTop{
+    animation: moveFromTop 0.6s ease forwards;
+}
+@keyframes moveFromTop {
+    0%{ /*0%的时候放到最上面向下滑动*/
+        /* transform:  translate(-50%,-100%); */
+        transform: translateY(-100%);/*右下角为正值*/
+    }
+}
+/*左滑*/
+.moveFromLeft{
+    animation: moveFromLeft 0.6s ease forwards;
+}
+@keyframes moveFromLeft {
+    0%{
+        transform: translateX(-100%);
+    }
+}
+/*按钮渐近渐出*/
+.page-moveIconUp {
+    animation: fadeIn ease 1.3s both infinite;
+}
+@keyframes fadeIn {
+    0% {
+        transform: translateY(100%);
+        opacity: 0; /*初始状态 透明度为0*/
+    }
+    50% {
+        transform: translateY(0%);
+        opacity: 1; /*中间状态 透明度为1*/
+    }
+    100% {
+        transform: translateY(-100%);
+        opacity: 0; /*结尾状态 透明度为0*/
+    }
+}
+/*上滑*/
+.moveFromBottom{
+    animation: moveFromBottom 0.6s ease forwards;
+}
+@keyframes moveFromBottom{
+    0%{
+        transform:translateY(100%)
+    }
+}
+/*纸张放大*/
+.moveScale{
+    animation: moveScale  0.6s ease forwards;
+}
+@keyframes moveScale{
+    0%{
+        transform: scale(0);
+    }
+}
+/*Java圆圈跳动*/
+.moveCircle{
+    animation: moveCircle 1.2s ease forwards;
+}
+@keyframes moveCircle{
+    0%{
+        transform: translateY(-100%);
+    }
+    30%{
+        transform: translateY(35%);
+    }
+    60%{
+        transform: translateY(-25%);
+    }
+
+}
+/*界面向上滑动*/
+.moveToTop{
+    animation: moveToTop 1s ease forwards;
+}
+@keyframes moveToTop {
+    100%{
+        transform: translateY(-100%);
+    }
+}
+/*界面向下滑动*/
+.moveToBottom{
+    animation: moveToBottom 0.6s ease forwards;
+}
+@keyframes moveToBottom{
+    100%{
+        transform: translateY(100%);
+    }
+}

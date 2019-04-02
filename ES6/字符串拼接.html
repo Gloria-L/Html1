@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //模板字符串
+        let age = 20;
+        let name = "Cindy";
+        let a = 10;
+        let b = 20;
+
+        console.log("我的名字是"+name+",我今年"+age+"岁");
+        let id = "div1";
+        //'<div id="'><div>'
+        console.log('<div id="'+id+'"></div>');
+        //注意此处的符号和普通字符串拼接不一样 ``
+        console.log(`<div id="${id}" name="${name}" age="${a+b}"></div>`);
+
+        //includes包含返回true，不包含返回false
+        let str = "absdfghjl;";
+        console.log(str.includes('dfg')); //字符串包含dfg返回true
+        //indexOf方法可返回某个指定的字符串值在字符串中首次出现的位置
+        console.log(str.indexOf('dfg'));  //返回3下标
+        //startsWit表示参数字符串是否在原字符串的头部
+        //endsWith表示参数字符串是否在原字符串的尾部
+        console.log(str.startsWith('dfg'));
+        console.log(str.endsWith('absdfghjl;'));
+        let str1 = 'abc';
+        console.log(str1.padStart(8,'xyz'));
+        console.log(str1.repeat(5));
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    // var str = 'abc';
+    // var reg1 = /abc/;
+    // // 匹配可变的值
+    // var reg2 = new RegExp(str);
+    // var str2 = 'ggabdfghjk'
+    // console.log(  reg2.exec(str2)   );
+    var reg = /c{3,4}/
+    var reg1 = /./
+
+    var str = 'cccCcfgthyjkl';
+    console.log(  reg.exec(str)  );
+    /*
+    c{n}
+    c{n,m}  n-m个    /c{3,5}/
+    c{n,}  表示n个以上的c 包含n
+    *  0或多个
+    c* 和 c{0,} 是一个意思。
+    +  1或多个
+    c+ 和 c{1,} 是一个意思。
+    ?  0个或1个
+    c? 和 c{0,1} 是一个意思。
+    非贪婪模式 c{n,m}？  表示数量的符号后加？
+    /^开头,结尾$/
+    . 除了/n以外的任意字符
+    b|c表示,匹配b或者c
+
+    字符集合
+    */
+</script>
+
+</body>
+</html>

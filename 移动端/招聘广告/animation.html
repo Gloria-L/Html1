@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*#div1{
+            width: 200px;
+            height: 200px;
+            background: lightpink;
+            transition: width 2s ease 2s;  /*执行两秒,运动方式ease
+        }
+        #div1:hover{
+            width: 500px;
+        }*/
+
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: #ff0000;
+            animation: run 2s ease 2s infinite forwards ;
+        }
+        @keyframes run{
+            0%{
+                width:300px;
+            }
+            100%{
+                width:500px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="div1"></div>
+</body>
+</html>
