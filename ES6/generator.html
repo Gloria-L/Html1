@@ -13,6 +13,9 @@
         //调用next方法函数内部逻辑而开始执行，遇到yield表达式停止
         //done表示迭代器是否遍历完成
         //yield语句的返回值通常为undefined 当调用next方法时传参内容会作为启动时yield语句的返回值
+        
+        //每调用一次next，则执行一次yield语句，并在该处暂停，return完成之后，
+        //就退出了生成器函数，后续如果还有yield操作就不再执行了
         function *fn (){
             console.log('Begin!');
             yield "hahahahahaha";

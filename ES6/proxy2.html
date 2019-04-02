@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //检测对象、检测方法
+        let fn = function(){
+            console.log('11111');
+        }
+        let pro = new Proxy(fn,{
+            apply(a,b,c){
+                console.log('Apply is going...');
+                //调用fn方法，然后数组内容全部放入
+                Reflect.apply(...arguments);
+            }
+        });
+    </script>
+</body>
+</html>

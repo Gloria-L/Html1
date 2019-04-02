@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //设置set 获取get
+        let obj = {
+            name:'Marry',
+            age:22
+        }
+        let pro = new Proxy(obj,{
+        },{
+            set:(target,key,property) => {
+                console.log(target,key,property); //检测，属性，改值
+                console.log('set...');
+                target[key] = property;
+            },
+            get:() => {
+                console.log(target,key,property);
+                console.log('get...');
+                return target[key];
+            }
+        });
+
+        pro.name = "Jackey";
+        pro.age = 23;
+
+        console.log(obj);
+        console.log(pro.name);
+    </script>
+</body>
+</html>
