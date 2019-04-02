@@ -70,7 +70,7 @@
         fro(val of arr){
             console.log(val);
         }
-        //取索引
+        //取索引 0，1，2，3...
         fro(val of arr.keys()){
             console.log(val);
         }
@@ -78,14 +78,22 @@
         fro(val of arr.entries()){
             console.log(val);
         }
-        //全取并解构
+        //全取并解构 [索引，对应值]
         fro([index,val] of arr.entries()){
             console.log(index,val);
         }
+        //val循环数组取到的每一个元素，index取到的元素的索引
         arr5.forEach(function (val,index) {
             console.log(val,index)
         });
-        arr5.map()
+
+        var result = arr5.map(function(val,index){
+            return val+"xxx";
+        })
+        console.log(result);
+        arr5.filter(function(val,index){
+
+        })
     </script>
 </body>
 </html>

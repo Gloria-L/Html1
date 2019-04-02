@@ -1,10 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 </head>
 <body>
-$END$
+    <script>
+        class Person(){
+            constructor(name,age){
+                this.name = name;
+                this.age = age;
+            }
+
+            say(){
+                console.log('hello');
+            }
+        }
+
+        let p1 = new Person('xx',20);
+        p1.say();
+
+        class Coder extends Person{ //extends继承
+            constructor(name,age){
+                super(name,age);  //super调用父类的构造函数
+                this.shirt = "格子衬衫";
+            }
+            coding(){
+
+            }
+        }
+    </script>
+
 </body>
 </html>

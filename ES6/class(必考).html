@@ -24,7 +24,7 @@
         p1.say();
 
         //原型下的属性和方法能被实例化对象所共享
-        //继承:在子类中利用父类.call来继承父类的属性
+        //继承:在子类中利用父类.call(this)来继承父类的属性
         //存在问题：原本子类的原型下的constructor指向构造函数，需要指回来
         //原型对象下有一个属性constructor属性指向构造函数
         function Coder(name,age) {
@@ -36,6 +36,7 @@
         var c2 = new Coder('Jack',21);
         console.log(c2)
 
+        //子类的原型对象 = new 父类的实例化对象 继承方法4
         Coder.prototype = new Person();  //原型对象
         Coder.prototype.constructor = Coder;
 
