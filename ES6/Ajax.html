@@ -20,7 +20,7 @@
             }else { // code for IE6, IE5
                 xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
             }
-            //步骤二：向服务器发送请求
+            //步骤二：向服务器发送请求,true代表异步
             xmlhttp.open("GET","test.json",true);
             xmlhttp.send();
             //步骤三：服务器响应

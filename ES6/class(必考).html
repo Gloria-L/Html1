@@ -28,7 +28,7 @@
         //存在问题：原本子类的原型下的constructor指向构造函数，需要指回来
         //原型对象下有一个属性constructor属性指向构造函数
         function Coder(name,age) {
-            Person.call(this,name,age);
+            Person.call(this,name,age);  //先改变this指向然后再加属性
         }
 
         var c1 = new Coder('Mark',20);
