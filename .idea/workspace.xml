@@ -1,63 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2041f841-af33-4990-ac80-7b0d87561273" name="Default" comment="html基础">
-      <change afterPath="$PROJECT_DIR$/ES6/Ajax.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ES6/ES6_class.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ES6/class(必考).html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ES6/const常量.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ES6/jq_Ajax.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ES6/let临时性死区.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ES6/let块级作用域.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ES6/let基本语法.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ES6/map,数组去重.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ES6/promise.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ES6/promise2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ES6/set.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ES6/symbol.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ES6/test.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ES6/字符串拼接.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ES6/对象扩展.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ES6/扩展运算符.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ES6/数值扩展.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ES6/数组扩展.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ES6/箭头函数.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ES6/解构.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/正则表达式/1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/移动端/3.22rem.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/移动端/3.22百分比.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/移动端/mt.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/移动端/rem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/移动端/小海报/img/01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/移动端/小海报/img/01_s.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/移动端/小海报/img/01_s_2x.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/移动端/小海报/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/移动端/小海报/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/移动端/小海报/index2.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/移动端/小海报/index2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/移动端/招聘广告/animation.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/移动端/招聘广告/img/circle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/移动端/招聘广告/img/cover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/移动端/招聘广告/img/floating_develop.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/移动端/招聘广告/img/icon_up.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/移动端/招聘广告/img/people.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/移动端/招聘广告/img/wording.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/移动端/招聘广告/img/wording_cover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/移动端/招聘广告/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/移动端/招聘广告/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/移动端/招聘广告/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/移动端/招聘广告/touch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/移动端/招聘广告/zepto.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/移动端/招聘广告/zepto.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/移动端/移动端js/3.23test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/移动端/移动端js/touch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/移动端/移动端js/zepto.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/移动端/移动端js/zepto.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/移动端/美团/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/移动端/美团/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/移动端/111.html" beforeDir="false" afterPath="$PROJECT_DIR$/移动端/111.html" afterDir="false" />
-    </list>
+    <list default="true" id="2041f841-af33-4990-ac80-7b0d87561273" name="Default" comment="html基础" />
     <ignored path="$PROJECT_DIR$/../untitled/.tmp/" />
     <ignored path="$PROJECT_DIR$/../untitled/temp/" />
     <ignored path="$PROJECT_DIR$/../untitled/tmp/" />
@@ -276,18 +220,17 @@
       <workItem from="1552698395938" duration="61296000" />
       <workItem from="1553925400479" duration="28007000" />
       <workItem from="1554117064616" duration="371000" />
-      <workItem from="1554183390779" duration="1060000" />
+      <workItem from="1554183390779" duration="1744000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="158649000" />
+    <option name="totallyTimeSpent" value="159333000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="76" y="23" width="1174" height="678" extended-state="0" />
-    <editor active="true" />
+    <frame x="343" y="23" width="907" height="678" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18313459" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2370452" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />

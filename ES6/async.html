@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //自己走不用next 直接利用await调用函数即可
+        async function fn(){
+            console.log('Begin!');
+            await request1();
+            console.log('Next!')
+            await request2();
+        }
+
+        fn();
+
+        async function request1(){
+            return new Promise(function(resolve,reject){
+                setTimeout(() => {
+                    console.log('Request1 success!');
+                    resolve();
+                },1000);
+            });
+        }
+        async function request2(){
+            return new Promise(function(resolve,reject){
+                setTimeout(() => {
+                    console.log('Request2 success!');
+                    resolve();
+                },1000);
+            });
+        }
+    </script>
+    
+</body>
+</html>
