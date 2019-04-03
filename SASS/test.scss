@@ -1,0 +1,16 @@
+//未编译样式
+//使用sass --watch file1.scss:file2.css可以及时监听内容同时改变
+//scss编译输出css有四种格式：
+//nested（嵌套）
+//compact（紧凑）
+//xpanded（扩展）
+//compressed（压缩）
+.box {
+    width: 300px;
+    height: 400px;
+    background: #cccccc;
+    &-title {
+      height: 30px;
+      line-height: 30px;
+    }
+  }
