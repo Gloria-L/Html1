@@ -5,12 +5,97 @@
 //compact（紧凑）
 //xpanded（扩展）
 //compressed（压缩）
-.box {
-    width: 300px;
-    height: 400px;
-    background: #cccccc;
-    &-title {
-      height: 30px;
-      line-height: 30px;
+@import 'common';
+$color:#00f;
+$color:#f00 !default;
+$attr:width;
+$xx:xx;
+body{
+    // background: $color;
+    height:100px;
+    // color:$color;
+    #{$attr}:100px;
+    // background:$color url(#{$xx}.jpg) 0 0 no-repeat;
+    #div1{
+        width: 200px;
+        height:200px;
+        background: #f00;
+        padding:{
+            top:50px;
+            left:20px;
+        };
+        a{
+            color:greenyellow;
+            &:hover{
+                color:#0dd;
+            }
+        }
     }
+
+
+}
+
+  @mixin triangle {
+    width: 0px;
+    height: 0px;
+    border: 10px solid #000;
+    border-color: #cccccc;
+    border-top-color: #000
+  }
+
+  .aa{
+    @include triangle();
+  }
+
+  //混合宏
+  @mixin border($w:200px,$h:200px){
+    width: $w;
+    height: $h;
+    border: 5px solid #ccc;
+    border-radius: 10px;
+  }
+
+  //传参即为传参的值，不传就默认
+  .bb{
+    @include border(100px,200px);
+  }
+
+  .cc{
+    @include border(30px,400px);
+  }
+
+  .dd{
+    @extend .bb;
+  }
+
+  //占位写死，不能传参
+  %ff{
+    width: 100px;
+    height: 100px;
+  }
+
+  .gg{
+    @extend %ff;
+  }
+
+  .h{
+    @extend %ff;
+    color: lighten(#ccc,50);
+    height:floor(3.55);
+  }
+
+  //自定义函数
+  @function add($a,$b){
+    @return $a + $b;
+  }
+
+  .ii{
+    width:add(300px,400px);
+  }
+
+  .jj{
+    width: 300px-200px;
+    height: (300px/3);
+
+    font: 300px/3;
   }
