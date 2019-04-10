@@ -5,6 +5,7 @@ const HtmlPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const PurifyCSSPlugin = require('purifycss-webpack');
 const entry = require('./entry');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
     mode:'development',  //'production'是压缩模式
     entry:entry,//入口文件模块化放在entry.js里面
@@ -73,7 +74,14 @@ module.exports = {
         new PurifyCSSPlugin({
             paths:glob.sync(path.join(__dirname,'src/*.html')),//需要写绝对路径
         }),
-        new webpack.BannerPlugin('Gloria Code')  //打包的注释，基本没什么太大作用
+        new webpack.BannerPlugin('Gloria Code'), //打包的注释，基本没什么太大作用
+        new webpack.ProvidePlugin({
+            $:"jquery"
+        }),
+        new CopyWebpackPlugin([{  //拷贝
+            from:__dirname + '/src/public',
+            to:'public'
+        }])
     ],
     //配置webpack开发服务功能
     devServer:{
