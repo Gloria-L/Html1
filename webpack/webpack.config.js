@@ -9,7 +9,8 @@ module.exports = {
     },//入口文件
     output:{
         path:path.resolve(__dirname,'dist'),  //打包出去的文件名,且取到当前的绝对路径
-        filename:'[name].js'
+        filename:'[name].js',
+        publicPath:'http://localhost:8081/'
     },//出口文件
     module:{
         rules:[
@@ -30,6 +31,17 @@ module.exports = {
                         outputPath:'imgs/'
                     }
                 }]
+            },
+            {
+                test:/\.(htm|html)$/,
+                use:'html-withimg-loader'
+            },
+            {
+                test:/\.scss$/,
+                use:ExtractTextPlugin.extract({
+                    use:["css-loader","sass-loader"],
+                    fallback:"style-loader"
+                })
             }
         ]
     },

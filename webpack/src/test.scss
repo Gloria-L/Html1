@@ -1,0 +1,15 @@
+body{
+    #div1{
+        width: 200px;
+        height:200px;
+        background: #f00;
+        a{
+            color:greenyellow;
+            &:hover{
+                color:#0dd;
+            }
+        }
+    }
+
+
+}
