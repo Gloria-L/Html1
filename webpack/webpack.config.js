@@ -1,12 +1,13 @@
+const webpack = require('webpack');
 const path = require('path');
+const glob = require('glob');
 const HtmlPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const PurifyCSSPlugin = require('purifycss-webpack');
+const entry = require('./entry');
 module.exports = {
     mode:'development',  //'production'是压缩模式
-    entry:{
-        //此处可配置多个入口文件
-        index:'./src/index.js'
-    },//入口文件
+    entry:entry,//入口文件模块化放在entry.js里面
     output:{
         path:path.resolve(__dirname,'dist'),  //打包出去的文件名,且取到当前的绝对路径
         filename:'[name].js',
@@ -19,7 +20,10 @@ module.exports = {
                 // use:['style-loader','css-loader']
                 use:ExtractTextPlugin.extract({
                     fallback:"style-loader",
-                    use:"css-loader"
+                    use:[{
+                        loader:"css-loader",
+                        options:{importLoaders:1}
+                    },'postcss-loader']
                 })
             },
             {
@@ -42,6 +46,17 @@ module.exports = {
                     use:["css-loader","sass-loader"],
                     fallback:"style-loader"
                 })
+            },
+            {
+                //ES6转ES5
+                test:/\.js$/,
+                use:[{
+                    loader:'babel-loader',
+                    options:{
+                        presets:["@babel/preset-env"]
+                    }
+                }],
+                exclude:/node_modules/  //忽略node_modules文件夹，不用转化
             }
         ]
     },
@@ -54,7 +69,11 @@ module.exports = {
             template:'./src/index.html',
             hash:true
         }),
-        new ExtractTextPlugin("css/index.css")
+        new ExtractTextPlugin("css/index.css"),
+        new PurifyCSSPlugin({
+            paths:glob.sync(path.join(__dirname,'src/*.html')),//需要写绝对路径
+        }),
+        new webpack.BannerPlugin('Gloria Code')  //打包的注释，基本没什么太大作用
     ],
     //配置webpack开发服务功能
     devServer:{

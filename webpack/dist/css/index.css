@@ -1,10 +1,4 @@
-body{
-    background: #cccccc;
-}body #div1 {
-  width: 200px;
-  height: 200px;
-  background: #f00; }
-  body #div1 a {
-    color: greenyellow; }
-    body #div1 a:hover {
-      color: #0dd; }
+/*! Gloria Code */
+body {
+  background: #cccccc url(http://localhost:8081/imgs/7abb1ed00039dbdd57fde7e954a9161b.jpg);
+}
