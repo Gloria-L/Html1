@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        {{ msg }}
+        <!-- isLogin为true则执行，反之不执行 -->
+        <!-- v-if如果为false的话，在html里面是没有的，而v-show的flase情况下只是没有显示值，但其结构是显示在页面中的 -->
+        <!-- v-show比较适合页面里面某个元素频繁的切换；管理员和用户判断后生成页面适合v-if -->
+        <div v-if="isLogin">唯创</div> 
+        <div v-else>请登录</div>
+        <div v-show="isLogin">v-show指令</div>
+
+        <div v-if="str == 'A'">A</div>
+        <div v-else-if="str == 'B'">B</div>
+        <div v-else-if="str == 'C'">C</div>
+        <div v-else>D</div>
+    </div>
+
+    <script src="vue.js"></script>
+    <script>
+        new Vue({
+            el:'#app', //挂载元素
+            data:{
+                msg:'hello world!',
+                isLogin: false,
+                str:'A'
+            }
+        });
+    </script>
+</body>
+</html>

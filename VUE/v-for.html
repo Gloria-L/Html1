@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        {{ msg }}
+        <div v-for="(item, index) in arr">  
+            <!-- 小程序里面写死为item和index，这里随意起名显示即可 -->
+            {{ item }}  {{ index }}
+        </div>
+
+        <div v-for="user in listSort">
+            {{ user.name }}  {{ user.age }}
+            <!-- v-on可以简写用@代替 -->
+            <button @click="ShowName(user.name)">ShowName</button>
+        </div>
+
+        <!-- v-for循环遍历一个对象 -->
+        <div v-for="(attr,key) in dog">
+            {{ attr }}  {{ key }}
+        </div>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        //类 对象
+        const vm = new Vue({
+            el:"#app",
+            data:{
+                msg: 'hello',
+                arr: ['html','css','javascript'],
+                list: [
+                    {
+                        name: 'Amy',
+                        age: 25
+                    },
+                    {
+                        name: 'Jack',
+                        age: 19
+                    },
+                    {
+                        name: 'Jhon',
+                        age: 20
+                    }
+                ],
+                dog:{
+                    name: "WangWang",
+                    age: 2
+                }
+            },
+            computed:{
+                listSort(){
+                    //产生一个数组，可以对数组里面的值进行排序
+                    return this.list.sort((a,b) => {
+                        return a.age-b.age;  //取对象的age属性进行计算
+                    }); 
+                }
+            },
+            methods:{
+                ShowName(name){
+                    console.log(name);
+                }            
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <div id="app">
+            <!-- 事件符号$event -->
+            <button v-on:click="onClickHandler(2, $event)">Click me to plus!</button>
+            <input type="number" v-model="num" @keyup="keyup($event)"><!-- 对元素绑定事件 -->
+            <h1>
+                {{ count }}
+            </h1>
+        </div>
+        <script src="vue.js"></script>
+        <script>
+            new Vue({
+                el:'#app',
+                data:{
+                    count:0
+                },
+                methods:{
+                    onClickHandler(n, e){  //传参调用函数，给几加几
+                        // console.log(Math.random());
+                        this.count+=n;
+                        console.log(e);
+                    },
+                    keyup(e){
+                        console.log(e.keyCode);  //对事件进行分析
+                    }
+                }
+            });
+        </script>
+</body>
+</html>

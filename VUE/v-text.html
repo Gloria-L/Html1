@@ -9,16 +9,18 @@
 <body>
     <div id="app">
         {{ msg }}
+        <div v-text="msg"></div>  <!-- 解决{{msg}}在显示时会闪出原来代码的问题 -->
+
+        <div v-text="str"></div>
+        <div v-html="str"></div>
     </div>
-    <!-- 可以用CDN当一个节点 -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
     <script src="vue.js"></script>
     <script>
         new Vue({
-            el:'#app', //挂载元素,限制了当前所使用元素的范围
-            //class用.app,若没有id/class直接用元素选择器即可：div
+            el:'#app', 
             data:{
-                msg:'hello world!' //输出一个字符串
+                msg:'hello world!', //输出一个字符串
+                str:'<h1>hahahaha</h1>'
             }
         });
     </script>

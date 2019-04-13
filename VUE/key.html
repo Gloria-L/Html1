@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="username">
+    <script>
+        let oUserName = document.getElementById('username');
+        //keydown每次输入内容console获取的都是上一次的内容a null;b a;c ab
+        //keyup则可以保持同步
+        oUserName.addEventListener('keyup',() => {
+            console.log(oUserName.value);  //a.value在jQuery中就是a.val()
+        });
+    </script>
+</body>
+</html>
