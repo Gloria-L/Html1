@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p>
+            用户名：<input type="text" v-model="userName">
+            <p>当前用户名是：{{ userName }}</p>
+        </p>
+        <p>
+            性别：
+            <input type="radio" name="sex" value="1" v-model="sex">男  <!-- value才为真正获取到的属性 -->
+            <input type="radio" name="sex" value="0" v-model="sex">女
+            <p>性别是：{{ sex }}</p>
+        </p>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                userName:'',
+                sex:''
+            }
+        });
+    </script>
+</body>
+</html>
