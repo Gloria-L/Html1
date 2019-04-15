@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            height: 2000px;
+        }
+
+        #menu {
+            height: 30px;
+        }
+
+        #menu li {
+            list-style: none;
+            float: left;
+            margin-right: 10px;
+        }
+
+        .item {
+            height: 300px;
+        }
+
+        .item1 {
+            background: #ff0000;
+            margin-top: 500px;
+        }
+
+        .item2 {
+            background: #00ff00;
+        }
+
+        .item3 {
+            background: #ffff00;
+        }
+
+        .item3:target {
+            background: #cccccc;
+        }
+    </style>
+</head>
+<body>
+<ul id="menu">
+    <li><a href="#item1">菜单1</a></li>
+    <li><a href="#item2">菜单2</a></li>
+    <li><a href="#item3">菜单3</a></li>
+</ul>
+<div class="item item1" id="item1"></div>
+<div class="item item2" id="item2"></div>
+<div class="item item3" id="item3"></div>
+</body>
+</html>

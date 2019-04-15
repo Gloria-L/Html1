@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: #cccccc;
+            text-shadow: 10px 10px 10px #f00;
+            box-shadow: 10px 10px 0 0 #999;
+        }
+
+        #div2{
+            width: 200px;
+            border: 1px solid;
+
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        #div3{
+            width: 200px;
+            border: 1px solid;
+            word-break: break-all;
+            font-family: 'Serendity Script';
+
+            opacity: .5; /* 0~1 */
+            filter: alpha(opacity=50); /* 0~100 */
+        }
+
+        @font-face {
+            font-family: 'Serendity Script';
+            src: url('Serendipity Script/Serendity Script.eot'); /* IE9+ */
+            src: url('Serendipity Script/Serendity Script.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('Serendipity Script/Serendity Script.woff') format('woff'), /* chrome、firefox */
+            url('Serendipity Script/Serendity Script.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+            url('Serendipity Script/Serendity Script.svg#fontname') format('svg'); /* iOS 4.1- */
+        }
+
+        .test {
+            background-color: hsl(360, 50%, 50%);
+        }
+
+
+        #div4{
+            width: 200px;
+            height: 200px;
+            background: #ff0000;
+            /*border-radius: 10px 20px 30px 40px;*/
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <!--<div id="div1">唯创网讯</div>
+
+    <div id="div2">啊是的发生的发生发沙发撒发顺丰</div>
+
+    <div id="div3">asdfasfasfasdfasfasfasfasfsadf</div>
+    <div class="test">能看到此行背景说明你的浏览器支持HSL色彩记法</div>
+-->
+    <div id="div4"></div>
+</body>
+</html>

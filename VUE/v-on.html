@@ -5,15 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        #parent{
+            width: 200px;
+            height: 200px;
+            background: cadetblue;
+        }
+        #child{
+            width: 100px;
+            height: 100px;
+            background: burlywood;
+        }
+</style>
 </head>
 <body>
         <div id="app">
             <!-- 事件符号$event -->
             <button v-on:click="onClickHandler(2, $event)">Click me to plus!</button>
-            <input type="number" v-model="num" @keyup="keyup($event)"><!-- 对元素绑定事件 -->
+            <input type="number" v-model="num" @keyup.13="keyup($event)">
+            <!-- 对元素绑定事件;.13/.enter为修饰符 -->
             <h1>
                 {{ count }}
             </h1>
+
+            <div id="parent" @click="onClickParent">
+                <div id="child" @click.stop="onClickChild"></div>
+                <!-- 修饰符.stop为禁止子元素事件冒泡 -->
+            </div>
         </div>
         <script src="vue.js"></script>
         <script>
@@ -29,7 +47,17 @@
                         console.log(e);
                     },
                     keyup(e){
-                        console.log(e.keyCode);  //对事件进行分析
+                        //console.log(e.keyCode);  //对事件进行分析
+                        //if(e.keyCode == 13){  //回车键码13
+                            //this.count += this.num; //此时会发生字符串拼接
+                            this.count += parseInt(this.num);
+                        //}
+                    },
+                    onClickParent(){
+                        console.log('Parent click');
+                    },
+                    onClickChild(){
+                        console.log('Child click');
                     }
                 }
             });

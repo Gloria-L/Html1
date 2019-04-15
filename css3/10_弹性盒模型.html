@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .elem{
+            -webkit-box-flex: 1;
+        }
+        .elem1{
+            background: #ff0000;
+            height: 400px;
+            -webkit-box-ordinal-group: 3;
+        }
+        .elem2{
+            background: #ffff00;
+            height: 300px;
+            -webkit-box-ordinal-group: 1;
+        }
+        .elem3{
+            background: #00ff00;
+            height: 200px;
+        }
+        .parent{
+            display: -webkit-box;
+            -webkit-box-align: center;
+            -webkit-box-ordinal-group: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="elem elem1"></div>
+        <div class="elem elem2"></div>
+        <div class="elem elem3"></div>
+    </div>
+
+</body>
+</html>
+<!--
+flex box
+-->

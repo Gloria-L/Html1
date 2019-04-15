@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*#div1{
+            background: #ff0000;
+        }
+
+        #ul1 .aa~li{
+            background: #ff0000;
+        }
+        
+        input[name*="user"]{
+            background: #ff0000;
+        }
+
+        div[class*="bb"] {
+            border: 2px solid #000;
+        }*/
+        /*input[name="username"]{
+            background: #00ff00;
+        }
+        input[name="username"]:focus{
+            background: #ff0000;
+        }
+
+        #ul1 li:not(.aa){
+            background: #ff0000;
+        }
+        html{
+
+        }*/
+
+        /*#ul1 :last-child {
+            background: #ff0000;
+        }*/
+
+        /* #ul1 li:last-of-type{
+             background: #ff0000;
+         }*/
+
+        /*#ul2 li:nth-child(2n+1){
+            background: #ff0000;
+        }
+        #ul2 li:nth-child(2n){
+            background: #00ff00;
+        }*/
+
+        /*#ul2 li:nth-child(even){
+            background: #ff0000;
+        }
+
+        #ul2 li:nth-child(odd){
+            background: #00ff00;
+        }*/
+        input:checked + span {
+            background: #f00;
+        }
+
+        input:checked + span:after {
+            content: " 我被选中了";
+        }
+    </style>
+</head>
+<body>
+<!--<div id="div1">div1</div>-->
+<!--<ul id="ul1">
+    <div>div</div>
+    <div>01</div>
+    <div>02</div>
+    <div>03</div>
+    <div>04</div>
+    <div>05</div>
+    <li>01</li>
+    <li class="aa">02</li>
+    <li>03</li>
+    <li>04</li>
+    <li>05</li>
+    <div>div</div>
+</ul>-->
+
+<!--用户名:<input type="text" name="nameuser">
+密码: <input type="password" name="passuserword">
+年龄: <input type="text" name="userage">
+
+<div class="abc">1</div>
+<div class="acb">2</div>
+<div class="babbc">3</div>
+
+<img src="1.jpg" alt=""><img src="2.jpg" alt=""><img src="3.jpg" alt=""><img src="4.jpg" alt="">
+
+-->
+
+<!--<input type="text" name="username">-->
+<!--
+<ul id="ul2">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li>10</li>
+    <li>11</li>
+    <li>12</li>
+    <li>13</li>
+    <li>14</li>
+    <li>15</li>
+</ul>-->
+<form method="post" action="#">
+    <fieldset>
+        <legend>选中下面的项试试</legend>
+        <ul>
+            <li><label><input type="radio" name="colour-group" value="0"/><span>蓝色</span></label></li>
+            <li><label><input type="radio" name="colour-group" value="1"/><span>红色</span></label></li>
+            <li><label><input type="radio" name="colour-group" value="2"/><span>黑色</span></label></li>
+        </ul>
+    </fieldset>
+    <fieldset>
+        <legend>选中下面的项试试</legend>
+        <ul>
+            <li><label><input type="checkbox" name="colour-group2" value="0"/><span>蓝色</span></label></li>
+            <li><label><input type="checkbox" name="colour-group2" value="1"/><span>红色</span></label></li>
+            <li><label><input type="checkbox" name="colour-group2" value="2"/><span>黑色</span></label></li>
+        </ul>
+    </fieldset>
+    <input type="text" disabled>
+</form>
+</body>
+</html>

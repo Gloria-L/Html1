@@ -1,0 +1,469 @@
+body {
+    height: 2000px;
+}
+
+/* header开始 */
+#header {
+    height: 32px;
+    background-color: #f2f2f2;
+    font-size: 12px;
+    line-height: 32px;
+    font-family: "Microsoft YaHei", tahoma, arial, 'Hiragino Sans GB', '\5b8b\4f53', sans-serif;
+    border-bottom: 1px solid #eee;
+}
+
+#login-info {
+    float: left;
+}
+
+#login-info span, #login-info a, #quick-menu a {
+    color: #999;
+}
+
+#login-info a {
+    padding-left: 12px;
+}
+
+#login-info a:hover {
+    color: #ff0036;
+}
+
+#quick-menu {
+    float: right;
+}
+
+#quick-menu .menu {
+    float: left;
+    padding: 0 14px;
+    cursor: pointer;
+}
+
+#quick-menu .menu:hover > a {
+    color: #ff0036;
+}
+
+#quick-menu .iconfont {
+    font-size: 12px;
+    color: #ff0036;
+}
+
+#quick-menu .triangle {
+    position: relative;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 0 1px;
+    height: 33px;
+}
+
+#quick-menu .triangle:hover {
+    background: #ffffff;
+    border-color: #eee;
+}
+
+#quick-menu .triangle > a:hover {
+    text-decoration: underline;
+}
+
+#quick-menu .triangle::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #bbb transparent transparent transparent;
+    position: absolute;
+    top: 50%;
+    margin-top: -1.5px;
+    right: 4px;
+}
+
+#quick-menu .triangle:hover::after {
+    transform: rotate(180deg);
+    transform-origin: 3px 1.5px;
+    transition: transform .4s ease;
+}
+
+#quick-menu .triangle:hover .submenu {
+    display: block;
+}
+
+#quick-menu .submenu {
+    position: absolute;
+    top: 33px;
+    left: -1px;
+    padding: 0 10px;
+    width: 74px;
+    border-style: solid;
+    border-color: #eee;
+    border-width: 0 1px 1px 1px;
+    background-color: #fff;
+    display: none;
+    z-index: 1;
+}
+
+#quick-menu .submenu a:hover {
+    color: #ff0036;
+    text-decoration: underline;
+}
+
+#quick-menu .phone {
+    position: relative;
+}
+
+#quick-menu .phone:hover .qr-code {
+    display: block;
+}
+
+#quick-menu .qr-code {
+    width: 175px;
+    height: 227px;
+    background: #fff;
+    position: absolute;
+    top: 30px;
+    left: -43px;
+    -webkit-box-shadow: 0 0 5px #aaa;
+    -moz-box-shadow: 0 0 5px #aaa;
+    box-shadow: 0 0 5px #aaa;
+    display: none;
+    z-index: 1;
+}
+
+#quick-menu .qr-code::after {
+    content: '';
+    border-width: 4px;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -8px;
+    left: 85px;
+}
+
+/* header结束 */
+
+
+/* side-bar 开始 */
+#side-bar {
+    width: 35px;
+    background: #000;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+#side-bar .icon-shouji01 {
+    color: #fff;
+    float: left;
+    margin-top: 200px;
+    font-size: 30px;
+}
+
+#side-bar .vip {
+    width: 90px;
+    height: 30px;
+    background: #999999;
+    color: #fff;
+    position: absolute;
+    top: 200px;
+    left: -150px;
+    text-align: center;
+    line-height: 30px;
+    /*-webkit-transition: opacity .3s ease, left .3s ease;*/
+    /*-moz-transition: opacity .3s ease, left .3s ease;*/
+    /*-ms-transition: opacity .3s ease, left .3s ease;*/
+    /*-o-transition: opacity .3s ease, left .3s ease;*/
+    transition: all .3s ease;
+    /*transition: opacity .3s ease, left .3s ease;*/
+    opacity: 0;
+    visibility: hidden;
+}
+
+#side-bar .content:hover .vip {
+    left: -90px;
+    opacity: 1;
+    visibility: visible;
+}
+
+#side-bar .arrow {
+    width: 10px;
+    height: 10px;
+    background: #999999;
+    position: absolute;
+    right: -5px;
+    top: 10px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* side-bar 结束 */
+
+
+/* logo-search 开始 */
+#logo-search .wrapper {
+    position: relative;
+}
+
+#logo-search .logo, #logo-search .search {
+    float: left;
+}
+
+#logo-search .logo {
+    margin-left: -45px;
+}
+
+#logo-search .search {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#logo-search .search-form {
+    width: 623px;
+    height: 36px;
+    border: 2px solid #ff0036;
+}
+
+#logo-search .search-input {
+    width: 483px;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    text-indent: 10px;
+}
+
+#logo-search .search-btn {
+    width: 132px;
+    height: 100%;
+    background: #ff0036;
+    color: #fff;
+    border: 0;
+    float: right;
+    font-size: 20px;
+    letter-spacing: 5px;
+}
+
+#logo-search .hot-query {
+    margin-top: 5px;
+}
+
+#logo-search .hot-query li {
+    float: left;
+    border-right: 1px solid #999;
+    padding: 0 12px;
+    line-height: 1.1;
+}
+
+#logo-search .hot-query a {
+    color: #999;
+    font-size: 14px;
+}
+
+#logo-search .hot-query .last {
+    border-right: none;
+}
+
+#logo-search .hot-query li:first-child {
+    padding-left: 0;
+}
+
+#logo-search .hot-query .hot-query-highlight a {
+    color: #ff0036;
+}
+
+/* logo-search 结束 */
+
+/* main-nav 开始 */
+#main-nav {
+    height: 35px;
+    line-height: 35px;
+}
+
+#main-nav .wrapper {
+    margin-left: 210px;
+    width: 1020px;
+    overflow: hidden;
+}
+
+#main-nav li {
+    float: left;
+    padding: 0 8px;
+}
+
+#main-nav .nav-img {
+    width: 100px;
+    height: 30px;
+    margin-top: 3px;
+}
+
+#main-nav li a {
+    color: #000;
+}
+
+
+/* main-nav 结束 */
+
+
+/* banner 开始 */
+#banner {
+    background: #fd5957;
+}
+
+#banner .wrapper {
+    height: 500px;
+    background: url(../imgs/banner01.webp) no-repeat;
+    position: relative;
+}
+
+#banner .banner-nav {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+#banner .banner-nav li {
+    width: 25px;
+    height: 5px;
+    background: #000;
+    opacity: .3;
+    float: left;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#banner .banner-nav .selected {
+    background: #fff;
+}
+
+#banner .product {
+    width: 200px;
+    height: 536px;
+    background-color: rgba(0, 0, 0, .55);
+    position: absolute;
+    top: -36px;
+}
+
+#banner .product .category {
+    height: 36px;
+    background: #ff0036;
+    line-height: 36px;
+}
+
+#banner .product li {
+    color: #fff;
+    padding-left: 5px;
+}
+
+#banner .product li a {
+    color: #fff;
+}
+
+#banner .product .type {
+    height: 31.2px;
+    line-height: 31.2px;
+    cursor: pointer;
+}
+
+#banner .product .type:hover {
+    background: #ffffff;
+}
+
+#banner .product .type:hover a {
+    color: #ff0036;
+}
+
+#banner .product .type:hover .iconfont {
+    color: #ff0036;
+}
+
+
+/* banner 结束 */
+
+/* brand-list 开始 */
+#brand-list .nike {
+    width: 122px;
+    height: 108px;
+    border: 1px solid #ccc;
+    position: relative;
+}
+
+#brand-list .nike:hover .brand-mask {
+    opacity: 1;
+}
+
+#brand-list .brand-img {
+    width: 82%;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+#brand-list .brand-mask {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .8);
+    text-align: center;
+    overflow: hidden;
+    opacity: 0;
+    -webkit-transition: opacity .3s ease;
+    -moz-transition: opacity .3s ease;
+    -ms-transition: opacity .3s ease;
+    -o-transition: opacity .3s ease;
+    transition: opacity .3s ease;
+}
+
+#brand-list .brand-name {
+    color: #fff;
+    margin-top: 25px;
+}
+
+#brand-list .brand-enter {
+    background-color: #ff0036;
+    color: #fff;
+    border: none;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+    width: 63px;
+    height: 18px;
+}
+
+/* brand-list 结束 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
