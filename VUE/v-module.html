@@ -7,17 +7,51 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- v-module 双向数据绑定 -->
+    <!-- .lazy在需求用户名不写入而是判断合法性时获取焦点使用 -->
+    <!-- .number当前获取的是一个数字而非一个字符串 -->
     <div id="app">
-        <p>
-            用户名：<input type="text" v-model="userName">
-            <p>当前用户名是：{{ userName }}</p>
-        </p>
-        <p>
-            性别：
-            <input type="radio" name="sex" value="1" v-model="sex">男  <!-- value才为真正获取到的属性 -->
-            <input type="radio" name="sex" value="0" v-model="sex">女
-            <p>性别是：{{ sex }}</p>
-        </p>
+        <form action="">
+            <p>
+                用户名：<input type="text" v-model="userName">
+                用户名lazy：<input type="text" v-model.lazy="userName">
+                <p>当前用户名是：{{ userName }}</p>
+            </p>
+            <p>
+                年龄number：
+                <input type="number" v-model.number="age">
+            </p>
+            <p>
+                性别：
+                <input type="radio" name="sex" value="1" v-model="sex">男  <!-- value才为真正获取到的属性 -->
+                <input type="radio" name="sex" value="0" v-model="sex">女
+                <p>性别是：{{ sex }}</p>
+            </p>
+            <p>
+                爱好：
+                <input type="checkbox" name="hobby" value="足球" v-model="hobby">足球
+                <input type="checkbox" name="hobby" value="篮球" v-model="hobby">蓝球
+                <input type="checkbox" name="hobby" value="羽毛球" v-model="hobby">羽毛球
+                <p>爱好是：{{ hobby }}</p>
+            </p>
+            <p>
+                学校：
+                <select name="" id="" v-model="school">
+                    <option value="工大">工大</option>
+                    <option value="工程">工程</option>
+                    <option value="黑大">黑大</option>
+                    <option value="林大">林大</option>
+                </select>
+                <p>学校：{{ school }}</p>
+            </p>
+            <!-- 几个与浏览器相关的兼容性提示组件标签 -->
+            <input type="email">
+            <input type="range">
+            <input type="date">
+            <input type="url">
+            <input type="submit" value="提交"> 
+        </form>
+        
     </div>
     <script src="vue.js"></script>
     <script>
@@ -25,7 +59,10 @@
             el:'#app',
             data:{
                 userName:'',
-                sex:''
+                sex:'',
+                hobby:[],
+                school:'工大', //设置一个初始值
+                age:18
             }
         });
     </script>

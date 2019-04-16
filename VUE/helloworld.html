@@ -5,10 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        [v-cloak]{
+            display:none;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
         {{ msg }}
+        <!-- 小知识点：如果想查看msg原本的样子可以<div v-pre>{{ msg }}</div> -->
+        <div v-pre>{{ msg }}</div>
+        <!-- 小知识点：没有渲染完成就不显示，渲染完成才会显示，完善用户体验 -->
+        <div v-cloak>{{ msg }}</div>
     </div>
     <!-- 可以用CDN当一个节点 -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->

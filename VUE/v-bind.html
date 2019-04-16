@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .pink{
+            background:darksalmon;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <img v-bind:src="imgUrl" alt="">
+        <!-- 或直接去掉bind<img :src="imgUrl" alt=""> -->
+        <button @click="toggle">toggle</button><!-- 拴住：有就加上没有就去掉 -->
+        <div :class="{pink: isPink}">Hello!!</div> <!-- true起作用false不起作用 -->
+
+        <div :style="styleObj">World!!</div>
+    </div>
+
+    <script src="vue.js"></script>
+    <script>
+        new Vue({
+            el:'#app', 
+            data:{
+               imgUrl:'https://cn.vuejs.org/images/logo.png',
+               isPink:true,  //相当于一个开关
+               styleObj:{
+                   background:'#f00',
+                   color:'#00f',
+                   fontSize:'30px'
+                   //或'font-size':'30px'
+               }
+            },
+            methods:{
+                toggle(){
+                    this.isPink = !this.isPink;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
