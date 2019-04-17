@@ -22,13 +22,20 @@
         <h1 class="text-center">todolist</h1>
 
         <form class="form-inline text-center">
+                <div class="form-group">
+                    <input type="text" class="form-control" v-model="searchName" placeholder="请输入过滤商品名">
+                </div>
+                <button type="submit" class="btn btn-default" @click.prevent="filProduct()">过滤</button>
+        </form>
+
+        <form class="form-inline text-center">
             <div class="form-group">
                 <label for="exampleInputName2">Name</label>
                 <input type="text" class="form-control" v-model="proName" id="exampleInputName2" placeholder="请输入商品名">
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail2">price</label>
-                <input type="number" class="form-control"  v-model="proPrice" id="exampleInputEmail2" placeholder="请输入价格">
+                <input type="number" class="form-control"  v-model.number="proPrice" id="exampleInputEmail2" placeholder="请输入价格">
             </div>
             <button type="submit" class="btn btn-default" @click.prevent="add()">添加</button>
         </form>
@@ -41,15 +48,17 @@
                 <td>删除</td>
             </thead>
             <tbody>
-                <tr v-for="(item, index) in productList" :key="index" @click="change(item)" :class="{pink:item.isPink}">
+                <!-- key: -->
+                <tr v-for="(item, index) in showList" :key="item" @click="change(item)" :class="{pink:item.isPink}">
                     <td><input type="checkbox" v-model="item.isPink"></td>
                     <td>{{item.name}}</td>
                     <td>{{item.price}}</td>
-                    <td><button type="button" class="btn btn-warning glyphicon glyphicon-remove btn-xs"></button></td>
+                    <td><button type="button" class="btn btn-warning glyphicon glyphicon-remove btn-xs" @click.stop="del(index)"></button></td>
                 </tr>
                 <tr>
-                    <td><button type="button" class="btn btn-danger btn-xs">删除选中</button></td>
+                    <td><button type="button" class="btn btn-danger btn-xs" @click="delChecked()">删除选中</button></td>
                     <td colspan="3">总价是: {{this.Sum}} 元</td>
+                    <td colspan="3">总价是: {{total}} 元</td>
                     
                 </tr>
             </tbody>
@@ -84,25 +93,86 @@
                         isPink:false
                     }
                 ],
+                showList:[
+                {
+                        name: '衣服',
+                        price: 123,
+                        isPink:false
+                    }, {
+                        name: '裤子',
+                        price: 234,
+                        isPink:false
+                    }, {
+                        name: '手机',
+                        price: 8888,
+                        isPink:false
+                    }, {
+                        name: '鞋',
+                        price: 777,
+                        isPink:false
+                    }
+                ],  //用来显示的数组
                 proName:'',
                 proPrice:0,
                 Sum:0,
+                searchName:''
             },
             methods:{
                 add(){
                     this.productList.push({
                         // 取到name  和 price添加到  productList数组中
                         name:this.proName,
-                        price:this.proPrice
+                        price:this.proPrice,
+                        isPink:false
                     })
+                    this.showList = [...this.productList];
+                },
+                del(index){
+                    this.productList.splice(index,1);
+                    this.showList = [...this.productList];
+                },
+                filProduct(){
+                    let searchList = this.productList.filter((obj,index) => {
+                        //搜索关键字
+                        return obj.name.includes(this.searchName);
+                    });
+                    this.showList = [...this.searchList];
                 },
                 change(item){
+                    //只改变了showlist里面
                     item.isPink = !item.isPink;
+                    //求和的方法之一
                     if(item.isPink)
                         this.Sum += item.price;
                     else
                         this.Sum -= item.price;
                 },
+                delChecked(){
+                    //求和的方法之二
+                    //这种方法会导致每一次循环后最后一个的isPink值会改变，删除不掉
+                    // this.productList.forEach((obj,index) => {
+                    //     if(obj.isPink){
+                    //         this.productList.splice(index,1);  
+                    //     }
+                    // })
+                    let arr = this.productList.filter(function(obj,index){
+                        //过滤出所有isPink为false的,返回一个新的数组
+                        return !obj.isPink;
+                    })
+                    this.productList = arr;
+                    this.showList = [...this.productList];
+                }
+            },
+            computed:{
+                    total(){
+                        let sum = 0;
+                        this.productList.forEach(function(obj,index){
+                            if(obj.isPink){
+                                sum += obj.price;
+                            }
+                        });
+                        return sum;
+                    }
             }
         });
     </script>
