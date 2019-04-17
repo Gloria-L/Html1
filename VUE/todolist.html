@@ -8,12 +8,31 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <style>
+        .pink{
+            background:darksalmon;
+        }
+        </style>
 </head>
 
 <body>
 
     <div id="app">
+
         <h1 class="text-center">todolist</h1>
+
+        <form class="form-inline text-center">
+            <div class="form-group">
+                <label for="exampleInputName2">Name</label>
+                <input type="text" class="form-control" v-model="proName" id="exampleInputName2" placeholder="请输入商品名">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail2">price</label>
+                <input type="number" class="form-control"  v-model="proPrice" id="exampleInputEmail2" placeholder="请输入价格">
+            </div>
+            <button type="submit" class="btn btn-default" @click.prevent="add()">添加</button>
+        </form>
+
         <table class="table table-bordered text-center">
             <thead>
                 <td>选择</td>
@@ -22,15 +41,16 @@
                 <td>删除</td>
             </thead>
             <tbody>
-                <tr v-for="(item, index) in productList" :key="index">
-                    <td><input type="checkbox"></td>
+                <tr v-for="(item, index) in productList" :key="index" @click="change(item)" :class="{pink:item.isPink}">
+                    <td><input type="checkbox" v-model="item.isPink"></td>
                     <td>{{item.name}}</td>
                     <td>{{item.price}}</td>
                     <td><button type="button" class="btn btn-warning glyphicon glyphicon-remove btn-xs"></button></td>
                 </tr>
                 <tr>
                     <td><button type="button" class="btn btn-danger btn-xs">删除选中</button></td>
-                    <td colspan="3">总价是: 0 元</td>
+                    <td colspan="3">总价是: {{this.Sum}} 元</td>
+                    
                 </tr>
             </tbody>
         </table>
@@ -48,18 +68,41 @@
                 productList: [
                     {
                         name: '衣服',
-                        price: 123
+                        price: 123,
+                        isPink:false
                     }, {
                         name: '裤子',
-                        price: 234
+                        price: 234,
+                        isPink:false
                     }, {
                         name: '手机',
-                        price: 8888
+                        price: 8888,
+                        isPink:false
                     }, {
                         name: '鞋',
-                        price: 777
+                        price: 777,
+                        isPink:false
                     }
-                ]
+                ],
+                proName:'',
+                proPrice:0,
+                Sum:0,
+            },
+            methods:{
+                add(){
+                    this.productList.push({
+                        // 取到name  和 price添加到  productList数组中
+                        name:this.proName,
+                        price:this.proPrice
+                    })
+                },
+                change(item){
+                    item.isPink = !item.isPink;
+                    if(item.isPink)
+                        this.Sum += item.price;
+                    else
+                        this.Sum -= item.price;
+                },
             }
         });
     </script>
