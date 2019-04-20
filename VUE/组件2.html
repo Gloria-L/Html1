@@ -16,9 +16,13 @@
         <demo name="xixixi" age="30"></demo>
     </div>
     <!-- 子组件为template 父组件demo传参给template 更为规范和便利 -->
+    <!-- 父组件中传的值是不能被修改的 -->
+    <!-- 父调用子 -->
     <template id="temp">
         <div>
-            <slot name="slot1"></slot><!-- slot用来占位的 -->
+            <!-- 是对组件的扩展，通过slot插槽向组件内部指定位置传递内容，通过slot可以父子传参； -->
+            <!-- slot用来占位的，在组件模板中占好了位置，当使用该组件标签时候，组件标签里面的内容就会自动填坑 -->
+            <slot name="slot1"></slot>
             <h2>{{name}} --- {{age}}</h2>
             <p>{{age}}</p>
             <div>

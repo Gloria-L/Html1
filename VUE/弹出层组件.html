@@ -5,8 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        .dialog{
+            height: 400px;
+            width: 300px;
+            border: 1px solid #000;
+            background: burlywood;
+        }
+    </style>
 </head>
 <body>
-    
+    <div id="app">
+        <my-dialog title="Login" @close="fn()">
+            <h1>Document</h1>
+        </my-dialog>
+        <my-dialog title="Signin">
+            <div>
+                <div>
+                    <label>Name:</label>
+                    <input type="text" />
+                </div>
+                <div>
+                    <label>Password:</label>
+                    <input type="text" />
+                </div>
+            </div>
+        </my-dialog>
+    </div>
+    <template id="dial">
+        <div class="dialog">
+            <div class="dialog-title">
+                <span>{{title}}</span>
+                <span @click=>[X]</span>
+            </div>
+            <div class="dialog-content">
+                <slot></slot>
+            </div>
+        </div>
+    </template>
+    <script src="vue.js"></script>
+    <script>
+        let vm = new Vue({
+            el:"#app",
+            data:{
+
+            },
+            methosd:{
+                fn(){
+                    Console.leogth{}
+                }
+            },
+            components:{
+                "my-dialog":{
+                    template:"#dial",
+                    props:["title"]
+                }
+            }
+        })
+    </script>
 </body>
 </html>
