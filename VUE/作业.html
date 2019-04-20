@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <div>
+            是否需要额外付费设施
+            <input type="checkbox" v-model="isShow" @click="checkFn()">
+            <ul v-show="isShow">
+                <li v-for="obj in payList">
+                    {{obj.name}} ({{obj.price}})
+                    <input type="checkbox" :value="obj" v-model="list" >
+                </li>
+            </ul>
+        </div>
+        <div>
+            <p>订单费用信息</p>
+            <ul>
+                <li v-for="obj in list"> {{obj.name}} ({{obj.price}})</li>
+            </ul>
+        </div>
+        <div>总金额：{{total}}</div>
+    </div>
+
+    <script src="vue.js"></script>
+
+    <script>
+        let vm = new Vue({
+            el:'#app',
+            data:{
+                isShow:false,
+                payList:[
+                    {
+                        name:'沙发',
+                        price:100
+                    },
+                    {
+                        name:'wifi',
+                        price:50
+                    },
+                    {
+                        name:'电脑',
+                        price:200
+                    }
+                ],
+                list:[
+                    {
+                        name:'群力花园豪华型',
+                        price:400
+                    }
+                ]
+            }
+            ,
+            methods: {
+                checkFn(){
+                    // 是否需要额外付费设施  操作dada 中的list
+                    this.list.splice(1);
+                }
+            },
+            computed:{
+                total(){
+                    let sum = 0;
+                    this.list.forEach(function(obj,index){
+                        sum += obj.price;
+                    })
+                    return sum;
+                }
+            }
+        })
+        
+    </script>
+</body>
+
+</html>

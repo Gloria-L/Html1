@@ -1,23 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>@Gloria-L</title>
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="meta active">
-        <main>
+    <nav id="language">
+        <div class="meta" data-lang="en">标准</div>
+        <div class="meta" data-lang="cn">中式</div>
+    </nav>
+    <main>
             <section class="timeline">
                 <article>
-                    <ul class="stories"></ul>
-                </article>
-            
+                    <ul class="stories">
+                        <li class="story"></li>
+                    </ul>
+                </article>         
             </section>
-        </main>
-        
+    </main>
+    <a class="comments" href="https://github.com/Gloria-L" target="_blank">
+        <div class="popup">和我聊聊</div>
+        <div class="img-right">
+            <img class="sun" src="img/sun.png" alt="">
+        </div>       
+    </a>
+
+    <div class="cover done">
+            <h2>QIAN GUI</h2>
+            <h1>千鬼</h1>
+            <blockquote>轉身，壹縷冷香遠，逝雪深，笑意淺。來世妳渡我，可願？</blockquote>
     </div>
+    
+    <script>
+
+      window.onload = function () {
+          var body = document.body
+          if (body) {
+              var screenWidth = window.innerWidth
+              var width = body.scrollWidth
+              body.scrollLeft = width - screenWidth
+          }
+          //- Model
+          var lang = localStorage.getItem('lang') || 'en'
+          //- Controller
+          var langSelections = Array.from(document.querySelectorAll('#language .meta'))
+          langSelections.forEach(function(langSelection) {
+              langSelection.addEventListener('click', function(e) {
+                  var newLang = e.target.dataset.lang
+                  changeLang(lang, newLang)
+                  lang = newLang
+                  localStorage.setItem('lang', lang)
+              })
+          })
+          //- View
+          var html = document.querySelector('html')
+          var changeLang = function(oldLang, newLang) {
+              if (!newLang) return
+              html.classList.remove(oldLang)
+              html.classList.add(newLang)
+              langSelections.forEach(function(langSelection) {
+                  if (langSelection.dataset.lang == newLang) {
+                      langSelection.classList.add('active')
+                  } else {
+                      langSelection.classList.remove('active')
+                  }
+              })
+          }
+          changeLang(null, lang)
+          //- Cover
+          var cover = document.querySelector('.cover')
+          setTimeout(function() {
+              cover.classList.add('done')
+          }, 1000)
+      }
+    
+    </script>
 </body>
 </html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <button></button>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        let vm = Vue({
+            el:'#app',
+            data:{
+                arr:[1,2,3,4]
+            },
+            methods:{
+                fn(){
+                    this.arr[1]=666;
+                }
+            }
+        })
+        //检测数据更新
+        //es5 object.defineProperty()
+        //es6 proxy()
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <demo name="hahaha" age="10"></demo> <!-- 父组件中可含有子组件 -->
+        <h3 name="slot1">TEXT TEST1</h3>
+        <p name="slot2">slot test1</p>
+        <demo name="hehehe" age="20"></demo>
+        <h3>TEXT TEST2</h3>
+        <demo name="xixixi" age="30"></demo>
+    </div>
+    <!-- 子组件为template 父组件demo传参给template 更为规范和便利 -->
+    <template id="temp">
+        <div>
+            <slot name="slot1"></slot><!-- slot用来占位的 -->
+            <h2>{{name}} --- {{age}}</h2>
+            <p>{{age}}</p>
+            <div>
+                <slot name="slot2"></slot>
+            </div>
+        </div>
+    </template>
+    <script src="vue.js"></script>
+    <script>
+        let vm = new Vue({
+            el:"#app",
+            components:{
+                "demo":{
+                    template:"#temp", //定义模版样式
+                    props:["name","age"]//props用来传参,定义属性名内容自填
+                }
+            }
+        })
+    </script>
+</body>
+</html>

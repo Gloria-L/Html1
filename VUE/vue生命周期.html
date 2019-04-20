@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        {{ msg }}
+        {{ count }}
+        <button @click="count++">+++</button>
+        <button @click="fn()">click</button>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        //vue的生命周期
+        let vm = new Vue({
+            el:"#app",
+            data:{
+                msg:'hello',
+                count:0
+            },
+            beforeCreate(){
+                //在创建vue之前就已经执行了
+                console.log("beforeCreate",this.$el,this.$data);
+            },
+            created(){
+                console.log("created",this.$el,this.$data);
+            },
+            //挂载：将页面中的值挂载上了对应数据msg->msg:'hello'
+            beforeMount(){
+                console.log("beforeMount",this.$el,this.$data);
+            },
+            mounted(){
+                console.log("mounted",this.$el,this.$data);
+            },
+            beforeUpdate(){
+                console.log("beforeUpdate");
+            },
+            updated(){
+                console.log("updated");
+            },
+            beforeDestory(){
+                console.log("beforeDestory");
+            },
+            destoryed(){
+                console.log("destoryed");
+            },
+            methods:{
+                fn(){
+                    vm.$destroy();
+                }
+            }
+        })
+    </script>
+</body>
+</html>
