@@ -2,6 +2,8 @@
     <div>
         <h1>Page C</h1>
         {{$route.params.id}}
+        ------
+        {{$store.state.count}}
     </div>
 </template>
 

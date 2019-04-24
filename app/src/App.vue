@@ -10,6 +10,8 @@
             <router-link to="/b/888">重定向c页面 </router-link>  
              <!-- 用户看起来像在访问xxx但其实已经跳转到home了 -->
             <router-link to="/xxx">别名 </router-link>   
+            <router-link to="/count">传值计算 </router-link>   
+
         </div>
         <transition name="fade">
           <router-view/>
