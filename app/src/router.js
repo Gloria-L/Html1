@@ -6,10 +6,11 @@ import B from './views/B.vue'
 import C from './views/C.vue'
 import Test1 from './views/Test1.vue'
 import Test2 from './views/Test2.vue'
+import Error from './views/Error.vue'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
+  mode: 'history',  //如果是'hash‘模式则会有#
   base: process.env.BASE_URL,
   routes: [
     {
@@ -55,6 +56,15 @@ export default new Router({
       path: '/',
       component: Home,
       alias:'/xxx'
+    },
+    {
+      path:'*',
+      component: Error,
+      beforeEnter:(to,from,next) => {
+        // 路由的钩子函数
+        console.log(to,from,next);
+        next();
+      }
     }
   ]
 })

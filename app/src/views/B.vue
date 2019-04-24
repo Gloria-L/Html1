@@ -2,9 +2,9 @@
     <div>
         <h1>Page B</h1>
 
-        {{$route.params.name}}
+        name:{{$route.params.name}}
         ------
-        {{$route.params.id}}
+        id:{{$route.params.id}}
     </div>
 </template>
 
