@@ -18,7 +18,6 @@
             axios.get('https://bird.ioliu.cn/v1?url=https://api.douban.com/v2/movie/subject/'+this.$route.params.id)
             .then((result)=>{
                 // console.log(result)
-
                 this.movie = result.data;
             })
         },
@@ -26,5 +25,4 @@
 </script>
 
 <style lang="scss" scoped>
-
 </style>
