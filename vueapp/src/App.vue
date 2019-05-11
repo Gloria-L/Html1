@@ -19,17 +19,17 @@ export default {
         {
           name: "电影",
           path: "/movie",
-          bg: "#f00"
+          bg: "#87CEFF"
         },
         {
           name: "音乐",
           path: "/music",
-          bg: "#00ffee"
+          bg: "#AB82FF"
         },
         {
           name: "图书",
           path: "/book",
-          bg: "#feef00"
+          bg: "#66CDAA"
         },
         {
           name: "图片",
