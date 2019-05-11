@@ -40,6 +40,10 @@ export default new Router({
       component:Photo
     },
     {
+      path:"/photoDetail",
+      component:PhotoDetail
+    },
+    {
       path:'/',
       redirect: "/movie"
     }
