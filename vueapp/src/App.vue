@@ -1,31 +1,71 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <common-header :selectMenu="selectMenu"></common-header>
+    <div id="content">
+      <router-view></router-view>
     </div>
-    <router-view/>
+    <common-footer :menu="menu" :selectMenu="selectMenu" @change="fn"></common-footer>
   </div>
 </template>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-}
+<script>
+import CommonHeader from "@/components/CommonHeader.vue";
+import CommonFooter from "@/components/CommonFooter.vue";
+export default {
+  data() {
+    return {
+      menu: [
+        {
+          name: "电影",
+          path: "/movie",
+          bg: "#f00"
+        },
+        {
+          name: "音乐",
+          path: "/music",
+          bg: "#00ffee"
+        },
+        {
+          name: "图书",
+          path: "/book",
+          bg: "#feef00"
+        },
+        {
+          name: "图片",
+          path: "/photo",
+          bg: "#fabbaa"
+        }
+      ],
+      selectMenu:{
+          name: "电影",
+          path: "/movie",
+          bg: "#f00"
+        },
+    };
+  },
+  components: {
+    CommonHeader,
+    CommonFooter
+  },
+  methods: {
+    fn(index){
+      // console.log(index);
+      this.selectMenu = this.menu[index];
+    }
+  },
+  created() {
+      // console.log(this.$route.path);
+      this.menu.forEach((obj)=>{
+          if(obj.path == this.$route.path){
+             this.selectMenu = obj;
+          }
+      })
+  },
+};
+</script>
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+<style  scoped>
+#content {
+  margin: 1rem 0;
 }
 </style>
