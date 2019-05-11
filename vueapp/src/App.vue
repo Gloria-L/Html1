@@ -11,6 +11,7 @@
 <script>
 import CommonHeader from "@/components/CommonHeader.vue";
 import CommonFooter from "@/components/CommonFooter.vue";
+
 export default {
   data() {
     return {

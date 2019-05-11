@@ -1,6 +1,6 @@
 <template>
     <div>
-        图书
+图书
     </div>
 </template>
 
@@ -11,4 +11,5 @@
 </script>
 
 <style scoped>
+
 </style>

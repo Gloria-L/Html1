@@ -1,6 +1,6 @@
 <template>
     <div>
-        图片
+图片
     </div>
 </template>
 
@@ -11,4 +11,5 @@
 </script>
 
 <style scoped>
+
 </style>
