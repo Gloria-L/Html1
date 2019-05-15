@@ -7,50 +7,42 @@
     <title>Document</title>
 </head>
 <body>
-
     <div id="app">
 
     </div>
     <script src="react.development.js"></script>
     <script src="react-dom.development.js"></script>
     <script src="browser.min.js"></script>
-    
+
     <script type="text/babel">
         class MyComponent extends React.Component{
-            constructor(params) {
+            constructor(params){
                 super(params);
-                // 初始化state 
-                this.state = {
-                    num:0
-                }
-                this.add = this.add.bind(this);
+                this.clickHandle = this.clickHandle.bind(this);
             }
-            // 自定义的方法 this是undefined
-            add(){
-                // console.log(1111)
-                // 修改state  setState()
-                console.log(this);
-                this.setState({
-                    num:2
-                })
+            clickHandle(event){
+                console.log( this.refs.name.value);
+                console.log(this.xx.value);
+                console.log(event.target);
             }
             render(){
                 return (
                     <div>
-                        <h1>{this.state.num}</h1>
-                        <button onClick={this.add}>add</button>
+                        用户名：<input type="text" ref="name"/>
+                        密码：<input type="password" ref={input => this.xx =input } />
+                        <button onClick={this.clickHandle}>click</button>
                     </div>
                 )
             }
         }
-
+       
         ReactDOM.render(
-            <MyComponent></MyComponent>,
+            <MyComponent></MyComponent>
+            ,
             document.getElementById('app')
-        )
-
-
+        );
     </script>
 
+    
 </body>
 </html>

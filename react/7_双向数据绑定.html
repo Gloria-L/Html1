@@ -7,50 +7,43 @@
     <title>Document</title>
 </head>
 <body>
-
     <div id="app">
 
     </div>
     <script src="react.development.js"></script>
     <script src="react-dom.development.js"></script>
     <script src="browser.min.js"></script>
-    
+
     <script type="text/babel">
         class MyComponent extends React.Component{
             constructor(params) {
                 super(params);
-                // 初始化state 
                 this.state = {
-                    num:0
+                    msg : 'bbb'
                 }
-                this.add = this.add.bind(this);
+                this.change = this.change.bind(this);
             }
-            // 自定义的方法 this是undefined
-            add(){
-                // console.log(1111)
-                // 修改state  setState()
-                console.log(this);
+            change(event){
+                // msg 
+                console.log(event.target.value);
                 this.setState({
-                    num:2
-                })
+                    msg:event.target.value
+                });
             }
             render(){
                 return (
                     <div>
-                        <h1>{this.state.num}</h1>
-                        <button onClick={this.add}>add</button>
+                        <p>{this.state.msg}</p>
+                        <input type="text" onChange={this.change}/>
                     </div>
                 )
             }
         }
-
         ReactDOM.render(
-            <MyComponent></MyComponent>,
-            document.getElementById('app')
-        )
-
-
+            <MyComponent></MyComponent>
+            ,document.getElementById('app')
+        );
     </script>
-
+    
 </body>
 </html>
